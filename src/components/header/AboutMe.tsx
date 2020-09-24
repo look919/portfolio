@@ -38,7 +38,7 @@ const Button = styled.button`
   font-family: inherit;
   border: 1px solid #aaa;
   color: #ccc;
-  padding: 0.75em 1.5em;
+  padding: 0.75em 2em;
   text-transform: uppercase;
   cursor: pointer;
 

@@ -11,6 +11,7 @@ const App = () => {
   return (
     <AppWrapper>
       <Header />
+      <div id='skills'>&nbsp;</div>
     </AppWrapper>
   );
 };

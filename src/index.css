@@ -7,6 +7,7 @@
 }
 
 body {
+  box-sizing: border-box;
   font-size: 62.5%;
   line-height: 1.27273;
   color: white;
@@ -24,4 +25,20 @@ canvas {
   left: 0;
   z-index: -1;
   height: 100vh;
+}
+
+.nav-open {
+  background-color: rgb(9, 5, 24);
+  display: flex;
+}
+.nav-closed {
+  display: none;
+  background-color: transparent;
+}
+.svg-nav {
+  fill: inherit;
+  height: inherit;
+  width: inherit;
+  margin: inherit;
+  transition: inherit;
 }
