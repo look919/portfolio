@@ -10,7 +10,7 @@ const HeaderWrapper = styled.header`
 
 export const Header = () => {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper id='home'>
       <Nav />
       <AboutMe />
     </HeaderWrapper>

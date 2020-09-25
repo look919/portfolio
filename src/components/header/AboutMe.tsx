@@ -32,21 +32,40 @@ const ButtonContainer = styled.div`
   margin-top: 2em;
 `;
 const Button = styled.button`
+  position: relative;
   background-color: transparent;
   font-size: 1.6em;
   letter-spacing: 1px;
   font-family: inherit;
   border: 1px solid #aaa;
   color: #ccc;
-  padding: 0.75em 1.5em;
+  padding: 0.75em 2em;
   text-transform: uppercase;
   cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    margin-left: -3px;
+    height: 12px;
+    width: 6px;
+    background-color: #ccc;
+
+    transform: translateY(-50%);
+    transition: all 0.2s;
+  }
 
   &:focus {
     outline: none;
   }
   &:not(:last-of-type) {
     margin-right: 3em;
+  }
+  &:hover {
+    color: #000;
+    background-color: #ccc;
   }
 `;
 
