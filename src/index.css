@@ -13,12 +13,16 @@ body {
   color: white;
   width: 100vw;
   overflow-x: hidden;
-  height: 2000px;
+  height: 4000px;
 
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
     'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 
-  background-image: linear-gradient(to right, rgb(14, 7, 30), rgb(18, 8, 45));
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(14, 7, 30),
+    rgb(18, 8, 50)
+  );
 }
 
 canvas {
