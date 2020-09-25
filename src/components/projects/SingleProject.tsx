@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const Figure = styled.figure`
   display: grid;
-  max-width: 60%;
   align-items: center;
+  margin: 0 auto;
 
   transition: all 0.4s;
 `;
