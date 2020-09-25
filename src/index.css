@@ -35,6 +35,10 @@ canvas {
   display: none;
   background-color: transparent;
 }
+
+.navItem:hover + .navItem::before {
+  display: flex !important;
+}
 .svg-nav {
   fill: inherit;
   height: inherit;
