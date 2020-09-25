@@ -10,7 +10,7 @@ import {
 
 interface NavItemProps {
   hght: string;
-  textOfPrevious: string;
+  textofprevious: string;
 }
 
 const showUp = keyframes`
@@ -112,7 +112,7 @@ const ScrollLink = styled(Link)`
     text-align: center;
     text-transform: uppercase;
 
-    content: '${(props) => props.textOfPrevious}';
+    content: '${(props) => props.textofprevious}';
 
     transition: all 1s;
   }
@@ -142,7 +142,7 @@ export const Nav = () => {
           smooth={true}
           duration={1500}
           hght={isOpen ? '2em' : '0'}
-          textOfPrevious=''
+          textofprevious=''
         >
           <HomeIcon className='svg-nav' />
         </ScrollLink>
@@ -152,7 +152,7 @@ export const Nav = () => {
           smooth={true}
           duration={1500}
           hght={isOpen ? '2em' : '0'}
-          textOfPrevious='Home'
+          textofprevious='Home'
         >
           <SkillsIcon className='svg-nav' />
         </ScrollLink>
@@ -162,7 +162,7 @@ export const Nav = () => {
           smooth={true}
           duration={1500}
           hght={isOpen ? '2em' : '0'}
-          textOfPrevious='Skills'
+          textofprevious='Skills'
         >
           <ProjectsIcon className='svg-nav' />
         </ScrollLink>
@@ -172,7 +172,7 @@ export const Nav = () => {
           smooth={true}
           duration={1500}
           hght={isOpen ? '2em' : '0'}
-          textOfPrevious='Projects'
+          textofprevious='Projects'
         >
           <ContactIcon className='svg-nav' />
         </ScrollLink>
@@ -182,7 +182,7 @@ export const Nav = () => {
           smooth={true}
           duration={1500}
           hght={isOpen ? '2em' : '0'}
-          textOfPrevious='Contact'
+          textofprevious='Contact'
         >
           &nbsp;
         </ScrollLink>
