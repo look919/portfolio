@@ -32,23 +32,3 @@ canvas {
   z-index: -1;
   height: 100vh;
 }
-
-.nav-open {
-  background-color: rgb(9, 5, 24);
-  display: flex;
-}
-.nav-closed {
-  display: none;
-  background-color: transparent;
-}
-
-.navItem:hover + .navItem::before {
-  display: flex !important;
-}
-.svg-nav {
-  fill: inherit;
-  height: inherit;
-  width: inherit;
-  margin: inherit;
-  transition: inherit;
-}

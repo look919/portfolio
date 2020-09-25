@@ -1,0 +1,71 @@
+.nav-open {
+  background-color: rgb(9, 5, 24);
+  display: flex;
+}
+.nav-closed {
+  display: none;
+  background-color: transparent;
+}
+
+.navItem:hover + .navItem::before {
+  display: flex !important;
+}
+.svg-nav {
+  fill: inherit;
+  height: inherit;
+  width: inherit;
+  margin: inherit;
+  transition: inherit;
+}
+
+.carousel-root {
+  max-width: 55%;
+  max-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: 70em) {
+    width: 60%;
+  }
+  @media only screen and (max-width: 31.25em) {
+    width: 90vw;
+    padding: 0 1.5rem;
+  }
+}
+.slide {
+  background: none !important;
+}
+.carousel-status {
+  display: none !important;
+}
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.control-dots {
+  position: relative !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+
+  @media only screen and (max-width: 87.5em) {
+    margin-top: 1.5rem !important;
+  }
+  @media only screen and (max-width: 31.25em) {
+    margin-top: 3rem !important;
+  }
+}
+.selected:active,
+.selected:focus-within,
+.selected:focus {
+  outline: none !important;
+}
+.control-arrow {
+  margin: 10rem 0 !important;
+}
+.control-arrow:hover {
+  background: rgba(#000, 1) !important;
+}

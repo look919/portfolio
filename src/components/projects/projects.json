@@ -2,7 +2,7 @@
   {
     "title": "TwitterReplica",
     "github": "https://github.com/look919/twitterReplica",
-    "url": "http://35.158.105.176",
+    "url": "https://twitterreplica.herokuapp.com/",
     "img": "twitter.png",
     "descriptionPl": "To mój największy projekt, kompleksowością dorównuje całej reszcie projektów razem wziętej. Zawiera główne funkcjonalności Twittera, tweety, profile i wszystkie akcje z nimi związane takie jak like'i, retweety, followy i wiele wiele więcej.",
     "descriptionEn": "This is my biggest project, the complexity of which is equal to the rest of the projects put together. It contains the main features of Twitter, tweets, profiles and all related actions such as likes, retweets, follows and much more.",
