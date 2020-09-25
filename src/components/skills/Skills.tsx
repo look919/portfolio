@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 import { Heading } from '../Heading';
 import { frontendData, backendData, toolsData } from './skillsData';
@@ -13,6 +14,7 @@ const SkillsWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 7em 0;
 `;
 const Content = styled.div`
   display: flex;
@@ -36,31 +38,57 @@ const A = styled.a`
   }
 `;
 export const Skills = () => {
+  const isIPadOrSmaller = useMediaQuery({ query: '(max-width: 1024px)' });
+
   return (
     <SkillsWrapper id='skills'>
       <Heading text='Skills' />
       <Content>
-        <Roll left>
+        {!isIPadOrSmaller ? (
+          <Roll left>
+            <SkillsContainer
+              data={frontendData}
+              title='front-end'
+              animationDelay='1s'
+            />
+          </Roll>
+        ) : (
           <SkillsContainer
             data={frontendData}
             title='front-end'
             animationDelay='1s'
           />
-        </Roll>
-        <Fade bottom>
+        )}
+        {!isIPadOrSmaller ? (
+          <Fade bottom>
+            <SkillsContainer
+              data={backendData}
+              title='back-end'
+              animationDelay='2.5s'
+            />
+          </Fade>
+        ) : (
           <SkillsContainer
             data={backendData}
             title='back-end'
             animationDelay='2.5s'
           />
-        </Fade>
-        <Roll right>
+        )}
+        {!isIPadOrSmaller ? (
+          <Roll right>
+            <SkillsContainer
+              data={toolsData}
+              title='tools&others'
+              animationDelay='4s'
+            />
+          </Roll>
+        ) : (
           <SkillsContainer
             data={toolsData}
             title='tools&others'
             animationDelay='4s'
           />
-        </Roll>
+        )}
       </Content>
       <SPAN>
         Full list of technologies I work with you can find by clicking this{' '}
