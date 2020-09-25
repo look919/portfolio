@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Header } from './header/Header';
 import { Skills } from './skills/Skills';
+import { Projects } from './projects/Projects';
 
 const AppWrapper = styled.main`
   position: relative;
@@ -13,6 +14,7 @@ const App = () => {
     <AppWrapper>
       <Header />
       <Skills />
+      <Projects />
     </AppWrapper>
   );
 };
