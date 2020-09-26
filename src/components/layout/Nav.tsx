@@ -20,8 +20,8 @@ const NavWrapper = styled.nav`
   z-index: 100;
   top: 0;
   right: 0;
-  height: 12em;
-  width: 12em;
+  height: 7.5rem;
+  width: 7.5rem;
   display: flex;
   flex-direction: column;
 
@@ -31,7 +31,7 @@ const NavWrapper = styled.nav`
 `;
 const NavButton = styled.button`
   width: 100%;
-  height: 12em;
+  height: 7.5rem;
   cursor: pointer;
   border: none;
   display: flex;
@@ -52,7 +52,7 @@ const NavButton = styled.button`
 `;
 const NavBurger = styled.div`
   position: relative;
-  width: 2em;
+  width: 1.6rem;
   height: 2px;
   background-color: white;
   transition: all 0.2s;
@@ -63,7 +63,7 @@ const NavBurger = styled.div`
     left: 50%;
     transform: translateX(-50%);
     content: '';
-    width: 2em;
+    width: 1.6rem;
     height: 2px;
     background-color: white;
     transition: all 0.2s;
@@ -77,10 +77,10 @@ const NavBurger = styled.div`
 `;
 const NavIcons = styled.div`
   position: fixed;
-  top: 12em;
+  top: 7.5rem;
   right: 0;
   height: ${(props: { hght: string }) => props.hght || '0'};
-  width: 12em;
+  width: 7.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,25 +89,25 @@ const NavIcons = styled.div`
 `;
 const ScrollLink = styled(NavLink)`
   fill: #ccc;
-  width: 2em;
-  margin: 1.5em 0;
+  width: 1.6rem;
+  margin: 0.8rem 0;
   height: ${(props: NavItemProps) => props.hght || '0'};
   cursor: pointer;
   transition: all 0.5s;
 
   &:first-of-type: {
     margin: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.8rem;
   }
 
   &::before {
     position: absolute;
-    right: 8em;
-    margin-top: -3.35em;
+    right: 7rem;
+    margin-top: -3rem;
     display: none;
     background-color: rgb(9, 5, 24);
-    padding: 1.2em 3em;
-    font-size: 1.5em;
+    padding: 1.1rem 2.5rem;
+    font-size: 0.9rem;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -135,7 +135,7 @@ export const Nav = () => {
         <NavBurger id='icon' />
       </NavButton>
 
-      <NavIcons id='nav-icons' hght={isOpen ? '22em' : '0'}>
+      <NavIcons id='nav-icons' hght={isOpen ? '12.5rem' : '0'}>
         <ScrollLink
           to='/'
           activeStyle={{ fill: '#ccc' }}

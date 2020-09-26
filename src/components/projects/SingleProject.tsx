@@ -15,25 +15,19 @@ const ProjectInfo = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
+  padding: 0 0.5rem;
   margin-bottom: 1rem;
 `;
 const ProjectName = styled.h3`
-  font-size: 3.25em;
+  font-size: 2rem;
   text-align: left;
-  padding: 0 0.25em;
   flex: 1 0 0;
 `;
 
 const ProjectGithub = styled.a`
   &:link,
   &:visited {
-    color: #dfc4ea;
-    font-weight: 900;
-    text-decoration: none;
-    font-size: 2.5em;
-    padding: 0 0.4em;
-    margin-bottom: 0;
-    transition: all 0.4s;
+    font-size: 1.4rem;
 
     &:not(:last-of-type) {
       margin-right: 5px;
@@ -41,10 +35,12 @@ const ProjectGithub = styled.a`
   }
 
   svg {
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.8rem;
+    width: 1.8rem;
     fill: #dfc4ea !important;
     transition: all 0.4s;
+    margin-right: 0.7rem;
+    margin-bottom: -5px;
   }
 
   &:hover {
@@ -57,13 +53,7 @@ const ProjectGithub = styled.a`
 const ProjectLinkActive = styled.a`
   &:link,
   &:visited {
-    color: #dfc4ea;
-    font-weight: 900;
-    text-decoration: none;
-    font-size: 2.5em;
-    padding: 0 0.4em;
-    margin-bottom: 0;
-    transition: all 0.4s;
+    font-size: 1.6rem;
 
     &:not(:last-of-type) {
       margin-right: 5px;
@@ -71,15 +61,17 @@ const ProjectLinkActive = styled.a`
   }
 
   svg {
-    height: 1.5em;
-    width: 1.5em;
+    height: 2rem;
+    width: 2rem;
     fill: #dfc4ea;
+    margin-bottom: -5px;
+
     transition: all 0.4s;
   }
 
   &:hover {
     svg {
-      fill: #fff;
+      fill: #fff !important;
       transform: translateY(-1px) !important;
     }
   }
@@ -119,16 +111,12 @@ const ProjectDescription = styled.div`
   justify-content: center;
   text-align: center;
 
-  font-size: 2.5em;
+  font-size: 1.6rem;
   color: #dfc4ea;
   border-bottom: 1px solid #ccc;
 
   span {
     padding: 0 1rem;
-  }
-
-  @media only screen and (max-width: 31.25em) {
-    font-size: 2em;
   }
 `;
 
@@ -159,7 +147,7 @@ const ProjectInDevelopment = styled.div`
 
   border: none;
   padding: 5px 15px;
-  font-size: 2em;
+  font-size: 1.4rem;
   background: linear-gradient(265deg, rgb(26, 83, 255), rgb(26, 83, 255));
 `;
 const ProjectOverview = styled.div`

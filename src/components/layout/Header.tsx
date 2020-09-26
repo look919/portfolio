@@ -7,14 +7,13 @@ const HeaderContainer = styled.header`
   position: absolute;
   top: 2.5rem;
   left: 4rem;
-  height: 12em;
   display: flex;
   flex-direction: column;
 
   animation: ${showUp} 1.5s ease-out 0.25s both;
 `;
 const SmallerMarginTop = styled.div`
-  margin-top: -0.5em;
+  margin-top: -0.5rem;
   margin-left: -3px;
 `;
 

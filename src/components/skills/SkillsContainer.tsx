@@ -41,14 +41,14 @@ const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   transition: all 0.5s;
-  margin-bottom: 3em;
+  margin-bottom: 2rem;
   margin-left: -3px;
 
   svg {
     fill: #aaa;
-    height: 2.75em;
-    width: 2.75em;
-    margin-right: 2.5em;
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-right: 1.4rem;
 
     transition: all 1.2s;
 
@@ -56,7 +56,7 @@ const TitleContainer = styled.div`
       ${(props: { delay: string }) => props.delay};
   }
   h3 {
-    font-size: 3em;
+    font-size: 2rem;
     color: #ccc;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -71,35 +71,36 @@ const ElementContainer = styled.div`
   transition: all 0.5s;
 
   &:not(:last-of-type) {
-    margin-bottom: 1em;
+    margin-bottom: 0.6rem;
   }
 
   svg {
     fill: ${(props: { fillColor: string }) =>
       props.fillColor || '#aaa'} !important;
-    height: 2.25em;
-    width: 2.25em;
+    height: 1.6rem;
+    width: 1.6rem;
     margin-right: 2.5em;
 
     transition: all 1s;
   }
   span {
     color: #ccc;
-    font-size: 2.25em;
+    font-size: 1.6rem;
     letter-spacing: 1px;
   }
 `;
 
 const SkillsBox = styled.div`
-  width: 40em;
+  width: 100%;
+  max-width: 40em;
   height: 35em;
   background-color: rgb(54, 63, 78);
   display: flex;
   flex-direction: column;
-  padding: 5em 3em;
+  padding: 3.25rem 2.5rem;
   padding-bottom: 0;
   margin-top: ${(props: { delay: string; marTop: boolean }) =>
-    props.marTop ? '-2em' : '0'};
+    props.marTop ? '-1.6rem' : '0'};
 
   animation: ${backgroundFakeHoverAnimation} 2s ease
     ${(props: { delay: string; marTop: boolean }) => props.delay};
@@ -119,9 +120,11 @@ const SkillsBox = styled.div`
   &:not(:hover) > ${ElementContainer} {
     svg {
       fill: #aaa !important;
+      height: 1.6rem;
+      width: 1.6rem;
     }
     span {
-      font-size: 2.25em;
+      font-size: 1.6rem;
       color: #aaa;
       letter-spacing: 1px;
     }

@@ -7,7 +7,7 @@ const WelcomePageWrapper = styled.section`
   width: 50%;
   position: absolute;
   top: 50%;
-  left: 14em;
+  left: 7.5rem;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ const WelcomePageWrapper = styled.section`
 
 const ScrollLink = styled(Link)`
   &:not(:last-of-type) {
-    margin-right: 3em;
+    margin-right: 2rem;
   }
 `;
 
