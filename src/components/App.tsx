@@ -7,7 +7,7 @@ import { Header } from './layout/Header';
 
 import { WelcomePage } from './welcomePage/WelcomePage';
 import { Skills } from './skills/Skills';
-// import { Projects } from './projects/Projects';
+import { Projects } from './projects/Projects';
 
 export const App = () => (
   <BrowserRouter>
@@ -17,8 +17,9 @@ export const App = () => (
       <Switch>
         <Route path='/' component={WelcomePage} exact={true} />
         <Route path='/skills' component={Skills} />
+
+        <Route path='/projects' component={Projects} />
         {/*
-        <Route path='/projects' component={ProjectsPage} />
         <Route path='/contact' component={ContactPage} />
         <Route component={NotFoundPage} /> */}
       </Switch>
