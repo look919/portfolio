@@ -1,23 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './app.css';
-import { Header } from './header/Header';
-import { Skills } from './skills/Skills';
-import { Projects } from './projects/Projects';
+import { WelcomePage } from './welcomePage/WelcomePage';
+// import { Skills } from './skills/Skills';
+// import { Projects } from './projects/Projects';
 
-const AppWrapper = styled.main`
-  position: relative;
-  width: 100%;
-`;
-
-const App = () => {
-  return (
-    <AppWrapper>
-      <Header />
-      <Skills />
-      <Projects />
-    </AppWrapper>
-  );
-};
-
-export default App;
+export const App = () => (
+  <BrowserRouter>
+    <div>
+      <Switch>
+        <Route path='/' component={WelcomePage} exact={true} />
+        {/* <Route path='/skills' component={SkillsPage} />
+        <Route path='/projects' component={ProjectsPage} />
+        <Route path='/contact' component={ContactPage} />
+        <Route component={NotFoundPage} /> */}
+      </Switch>
+    </div>
+  </BrowserRouter>
+);

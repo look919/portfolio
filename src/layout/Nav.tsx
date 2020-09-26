@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { Link } from 'react-scroll';
-import {
-  HomeIcon,
-  SkillsIcon,
-  ProjectsIcon,
-  ContactIcon,
-} from '../../img/Svgs';
+import { Link } from 'react-router-dom';
+import { HomeIcon, SkillsIcon, ProjectsIcon, ContactIcon } from '../img/Svgs';
 
 interface NavItemProps {
   hght: string;
@@ -102,6 +97,11 @@ const ScrollLink = styled(Link)`
   cursor: pointer;
   transition: all 0.5s;
 
+  &:first-of-type: {
+    margin: 0;
+    margin-bottom: 1.5em;
+  }
+
   &::before {
     position: absolute;
     right: 8em;
@@ -112,6 +112,7 @@ const ScrollLink = styled(Link)`
     font-size: 1.5em;
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
 
     content: '${(props) => props.textofprevious}';
 
@@ -137,54 +138,31 @@ export const Nav = () => {
       </NavButton>
 
       <NavIcons id='nav-icons' hght={isOpen ? '22em' : '0'}>
-        <ScrollLink
-          to='home'
-          spy={true}
-          smooth={true}
-          duration={1500}
-          hght={isOpen ? '2em' : '0'}
-          textofprevious=''
-        >
+        <ScrollLink to='/' hght={isOpen ? '2em' : '0'} textofprevious=''>
           <HomeIcon className='svg-nav' />
         </ScrollLink>
         <ScrollLink
-          to='skills'
-          spy={true}
-          smooth={true}
-          duration={1500}
+          to='/skills'
           hght={isOpen ? '2em' : '0'}
           textofprevious='Home'
         >
           <SkillsIcon className='svg-nav' />
         </ScrollLink>
         <ScrollLink
-          to='projects'
-          spy={true}
-          smooth={true}
-          duration={1500}
+          to='/projects'
           hght={isOpen ? '2em' : '0'}
           textofprevious='Skills'
         >
           <ProjectsIcon className='svg-nav' />
         </ScrollLink>
         <ScrollLink
-          to='contact'
-          spy={true}
-          smooth={true}
-          duration={1500}
+          to='/contact'
           hght={isOpen ? '2em' : '0'}
           textofprevious='Projects'
         >
           <ContactIcon className='svg-nav' />
         </ScrollLink>
-        <ScrollLink
-          to='home'
-          spy={true}
-          smooth={true}
-          duration={1500}
-          hght={isOpen ? '2em' : '0'}
-          textofprevious='Contact'
-        >
+        <ScrollLink to='/' hght={isOpen ? '2em' : '0'} textofprevious='Contact'>
           &nbsp;
         </ScrollLink>
       </NavIcons>

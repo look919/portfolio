@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const AboutMeWrapper = styled.section`
   width: 50%;
@@ -85,10 +85,10 @@ export const AboutMe = () => {
         Developer, so I work hard everyday to become one.
       </Span>
       <ButtonContainer>
-        <ScrollLink to='projects' spy={true} smooth={true} duration={1500}>
+        <ScrollLink to='/projects'>
           <Button>Explore Work</Button>
         </ScrollLink>
-        <ScrollLink to='projects' spy={true} smooth={true} duration={1500}>
+        <ScrollLink to='/projects'>
           <Button>View profile</Button>
         </ScrollLink>
       </ButtonContainer>
