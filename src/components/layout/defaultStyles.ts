@@ -58,7 +58,7 @@ export const A = styled.a`
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 3em;
 
   animation: ${showUp} 1s ease-out 1.5s both;
 `;

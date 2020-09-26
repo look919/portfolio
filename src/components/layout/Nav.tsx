@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { showUp } from './defaultStyles';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   HomeIcon,
   SkillsIcon,
@@ -87,7 +87,7 @@ const NavIcons = styled.div`
   background-color: rgb(9, 5, 24);
   transition: height 0.5s;
 `;
-const ScrollLink = styled(Link)`
+const ScrollLink = styled(NavLink)`
   fill: #ccc;
   width: 2em;
   margin: 1.5em 0;
@@ -136,11 +136,17 @@ export const Nav = () => {
       </NavButton>
 
       <NavIcons id='nav-icons' hght={isOpen ? '22em' : '0'}>
-        <ScrollLink to='/' hght={isOpen ? '2em' : '0'} textofprevious=''>
+        <ScrollLink
+          to='/'
+          activeStyle={{ fill: '#ccc' }}
+          hght={isOpen ? '2em' : '0'}
+          textofprevious=''
+        >
           <HomeIcon className='svg-nav' />
         </ScrollLink>
         <ScrollLink
           to='/skills'
+          activeStyle={{ fill: '#fff' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Home'
         >
@@ -148,6 +154,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/projects'
+          activeStyle={{ fill: '#fff' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Skills'
         >
@@ -155,12 +162,18 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/contact'
+          activeStyle={{ fill: '#fff' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Projects'
         >
           <ContactIcon className='svg-nav' />
         </ScrollLink>
-        <ScrollLink to='/' hght={isOpen ? '2em' : '0'} textofprevious='Contact'>
+        <ScrollLink
+          to='/'
+          activeStyle={{ fill: '#fff' }}
+          hght={isOpen ? '2em' : '0'}
+          textofprevious='Contact'
+        >
           &nbsp;
         </ScrollLink>
       </NavIcons>
