@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './app.css';
+
 import { Nav } from './layout/Nav';
-import { WelcomePage } from './welcomePage/WelcomePage';
+import { Header } from './layout/Header';
 
 // import { Skills } from './skills/Skills';
 // import { Projects } from './projects/Projects';
@@ -10,6 +11,7 @@ import { WelcomePage } from './welcomePage/WelcomePage';
 export const App = () => (
   <BrowserRouter>
     <Fragment>
+      <Header />
       <Nav />
       <Switch>
         <Route path='/' component={WelcomePage} exact={true} />

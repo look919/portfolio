@@ -12,7 +12,8 @@ body {
   line-height: 1.27273;
   color: white;
   width: 100vw;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
 
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
     'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;

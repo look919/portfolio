@@ -6,7 +6,6 @@ import { Spring } from 'react-spring/renderprops';
 import VisibilitySensor from 'react-visibility-sensor';
 
 import { Carousel } from 'react-responsive-carousel';
-import { Heading } from '../Heading';
 import { SingleProject } from './SingleProject';
 import projects from './projects.json';
 
@@ -29,7 +28,6 @@ const CarouselContainer = styled.div`
 export const Projects = () => {
   return (
     <ProjectsWrapper id='projects'>
-      <Heading text='Projects' />
       <VisibilitySensor
         partialVisibility={true}
         offset={{ top: 400, bottom: 300 }}

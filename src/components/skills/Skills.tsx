@@ -2,18 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 //import { useMediaQuery } from 'react-responsive';
 
-import { Heading } from '../Heading';
 import { frontendData, backendData, toolsData } from './skillsData';
 import { SkillsContainer } from './SkillsContainer';
 
 const SkillsWrapper = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 7em 0;
+  margin-top: 20em;
 `;
 const Content = styled.div`
   display: flex;
@@ -41,7 +40,6 @@ export const Skills = () => {
 
   return (
     <SkillsWrapper id='skills'>
-      <Heading text='Skills' />
       <Content>
         <SkillsContainer
           data={frontendData}
