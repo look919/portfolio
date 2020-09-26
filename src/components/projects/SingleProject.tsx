@@ -73,16 +73,14 @@ const ProjectLinkActive = styled.a`
   svg {
     height: 1.5em;
     width: 1.5em;
-    fill: ${(props: { active: string }) => props.active} !important;
+    fill: #dfc4ea;
     transition: all 0.4s;
   }
 
   &:hover {
     svg {
-      fill: ${(props: { active: string }) =>
-        props.active === '#dfc4ea' ? '#fff' : props.active} !important;
-      transform: ${(props: { active: string }) =>
-        props.active === '#dfc4ea' ? 'translateY(-1px)' : 'none'};
+      fill: #fff;
+      transform: translateY(-1px) !important;
     }
   }
 `;
@@ -186,13 +184,14 @@ export const SingleProject = ({ project }: { project: any }) => {
         <ProjectGithub href={project.github} target='_blanc'>
           <GithubIcon className='project-icon' />
         </ProjectGithub>
-        <ProjectLinkActive
-          active={project.online ? '#dfc4ea' : '#aaa'}
-          href={project.online ? project.url : '#'}
-          target='_blanc'
-        >
-          <ProjectOnlineIcon className='project-icon' />
-        </ProjectLinkActive>
+        {project.online && (
+          <ProjectLinkActive
+            href={project.online ? project.url : '#'}
+            target='_blanc'
+          >
+            <ProjectOnlineIcon className='project-icon' />
+          </ProjectLinkActive>
+        )}
       </ProjectInfo>
 
       <ProjectOverview>
