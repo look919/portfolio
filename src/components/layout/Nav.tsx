@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { Link } from 'react-router-dom';
-import { HomeIcon, SkillsIcon, ProjectsIcon, ContactIcon } from '../img/Svgs';
+import {
+  HomeIcon,
+  SkillsIcon,
+  ProjectsIcon,
+  ContactIcon,
+} from '../../img/Svgs';
 
 interface NavItemProps {
   hght: string;

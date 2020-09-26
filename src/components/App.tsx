@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './app.css';
+import { Nav } from './layout/Nav';
 import { WelcomePage } from './welcomePage/WelcomePage';
+
 // import { Skills } from './skills/Skills';
 // import { Projects } from './projects/Projects';
 
 export const App = () => (
   <BrowserRouter>
-    <div>
+    <Fragment>
+      <Nav />
       <Switch>
         <Route path='/' component={WelcomePage} exact={true} />
         {/* <Route path='/skills' component={SkillsPage} />
@@ -15,6 +18,6 @@ export const App = () => (
         <Route path='/contact' component={ContactPage} />
         <Route component={NotFoundPage} /> */}
       </Switch>
-    </div>
+    </Fragment>
   </BrowserRouter>
 );
