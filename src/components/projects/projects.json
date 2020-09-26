@@ -55,14 +55,25 @@
     "online": true
   },
   {
-    "title": "Portfolio",
+    "title": "New portfolio",
+    "github": "https://github.com/look919/tomaszwirkus",
+    "url": "https://www.tomaszwirkus.com/",
+    "img": "new-portfolio.png",
+    "descriptionPl": "Mój najnowszy projekt. Normalnie bym tego tu nie wrzucał, skoro to strona na której się znajdujesz, ale chciałem zaznaczyć, że to moje pierwsze spotkanie z styled-components i TypeScriptem.",
+    "descriptionEn": "My latest project. Normally I wouldn't put it in here, if it's the page you're on, but I would like to point out that this is my first meeting with styled-components and TypeScript.",
+    "imgHover": ["react.png", "styled-components.png", "typescript.png"],
+    "development": true,
+    "online": true
+  },
+  {
+    "title": "Old Portfolio",
     "github": "https://github.com/look919/portfolio",
     "url": "https://www.tomaszwirkus.com/",
     "img": "portfolio.png",
-    "descriptionPl": "Strona, na której się obecenie znajdujesz. To z pewnością nie jest najbardziej zaawansowany z moich projektów, ale zdecydowanie to właśnie na niego poświęciłem najwięcej czasu.",
-    "descriptionEn": "The website you are currently on. It's certainly not the most advanced of my projects, but it's definitely the one I spent most of my time on.",
+    "descriptionPl": "Mój pierwszy większy projekt wykorzystujący React'a. Z pewnością nie jest on najbardziej zaawansowany, ale to właśnie na niego poświęciłem najwięcej czasu. Niektóre jego komponenty wykorzystałem w nowym portfolio.",
+    "descriptionEn": "My first bigger project using React. It is certainly not the most advanced, but it is the one I have devoted most of my time to. I used some of its components in the new portfolio.",
     "imgHover": ["react.png", "css.png"],
-    "development": true,
+    "development": false,
     "online": true
   },
   {
