@@ -1,23 +1,28 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { Fragment } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './app.css';
-import { Header } from './header/Header';
+
+import { Nav } from './layout/Nav';
+import { Header } from './layout/Header';
+
+import { WelcomePage } from './welcomePage/WelcomePage';
 import { Skills } from './skills/Skills';
 import { Projects } from './projects/Projects';
 
-const AppWrapper = styled.main`
-  position: relative;
-  width: 100%;
-`;
-
-const App = () => {
-  return (
-    <AppWrapper>
+export const App = () => (
+  <BrowserRouter>
+    <Fragment>
       <Header />
-      <Skills />
-      <Projects />
-    </AppWrapper>
-  );
-};
+      <Nav />
+      <Switch>
+        <Route path='/' component={WelcomePage} exact={true} />
+        <Route path='/skills' component={Skills} />
+        <Route path='/projects' component={Projects} />
 
-export default App;
+        {/*
+        <Route path='/contact' component={ContactPage} />
+        <Route component={NotFoundPage} /> */}
+      </Switch>
+    </Fragment>
+  </BrowserRouter>
+);

@@ -8,7 +8,7 @@ export const frontendData = [
   {
     icon: <Icon.StyledComponentsIcon />,
     fillColor: '#DB7093',
-    text: 'Styled Components',
+    text: 'Styled-Components',
   },
   {
     icon: <Icon.NpmIcon />,
