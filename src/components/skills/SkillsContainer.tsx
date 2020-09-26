@@ -25,6 +25,17 @@ const titleFakeHoverAnimation = keyframes`
     color: #ccc;
 }
 `;
+const backgroundFakeHoverAnimation = keyframes`
+  0% {
+    background-color: rgb(54, 63, 78);
+  }
+  50% {
+      background-color: rgb(74, 83, 98);
+  }
+  100% {
+    background-color: rgb(54, 63, 78);
+}
+`;
 
 const TitleContainer = styled.div`
   display: flex;
@@ -50,7 +61,7 @@ const TitleContainer = styled.div`
     letter-spacing: 3px;
     text-transform: uppercase;
 
-    animation: ${titleFakeHoverAnimation} 1s ease
+    animation: ${titleFakeHoverAnimation} 2s ease
       ${(props: { delay: string }) => props.delay};
   }
 `;
@@ -87,12 +98,15 @@ const SkillsBox = styled.div`
   flex-direction: column;
   padding: 5em 3em;
   padding-bottom: 0;
-  margin-top: ${(props: { marTop: boolean }) => (props.marTop ? '-2em' : '0')};
+  margin-top: ${(props: { delay: string; marTop: boolean }) =>
+    props.marTop ? '-2em' : '0'};
 
+  animation: ${backgroundFakeHoverAnimation} 2s ease
+    ${(props: { delay: string; marTop: boolean }) => props.delay};
   transition: all 0.5s;
 
   &:hover {
-    background-color: rgb(64, 73, 88);
+    background-color: rgb(74, 83, 98);
   }
   &:hover > ${TitleContainer} {
     svg {
@@ -126,7 +140,7 @@ export const SkillsContainer = ({
   animationDelay,
   isInTheMiddle = false,
 }: SkillsContainerProps) => (
-  <SkillsBox marTop={isInTheMiddle}>
+  <SkillsBox marTop={isInTheMiddle} delay={animationDelay}>
     <TitleContainer delay={animationDelay}>
       <StarIcon />
       <h3>{title}</h3>
