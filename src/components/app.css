@@ -19,21 +19,25 @@
 }
 
 .carousel-root {
-  max-width: 55%;
+  max-width: 40%;
   max-height: 100vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media only screen and (max-width: 70em) {
-    width: 60%;
+}
+@media only screen and (max-width: 70em) {
+  .carousel-root {
+    max-width: 45%;
   }
-  @media only screen and (max-width: 31.25em) {
+}
+@media only screen and (max-width: 31.25em) {
+  .carousel-root {
     width: 90vw;
     padding: 0 1.5rem;
   }
 }
+
 .slide {
   background: none !important;
 }
@@ -48,15 +52,8 @@
 }
 .control-dots {
   position: relative !important;
-  margin-top: 1rem !important;
+  margin-top: 3rem !important;
   margin-bottom: 0 !important;
-
-  @media only screen and (max-width: 87.5em) {
-    margin-top: 1.5rem !important;
-  }
-  @media only screen and (max-width: 31.25em) {
-    margin-top: 3rem !important;
-  }
 }
 .selected:active,
 .selected:focus-within,
