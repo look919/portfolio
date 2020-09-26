@@ -17,8 +17,8 @@ export const App = () => (
       <Switch>
         <Route path='/' component={WelcomePage} exact={true} />
         <Route path='/skills' component={Skills} />
-
         <Route path='/projects' component={Projects} />
+
         {/*
         <Route path='/contact' component={ContactPage} />
         <Route component={NotFoundPage} /> */}

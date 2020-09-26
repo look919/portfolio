@@ -19,12 +19,6 @@ body {
 
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
     'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-
-  background-image: linear-gradient(
-    to right bottom,
-    rgb(14, 7, 30),
-    rgb(18, 8, 50)
-  );
 }
 
 canvas {
@@ -33,4 +27,5 @@ canvas {
   left: 0;
   z-index: -1;
   height: 100vh;
+  width: 100%;
 }
