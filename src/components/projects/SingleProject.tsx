@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { GithubIcon, ProjectOnlineIcon } from '../../img/Svgs';
 //import { Context } from '../Wrapper';
 
 const Figure = styled.figure`
@@ -21,6 +22,37 @@ const ProjectName = styled.h3`
   padding: 0 0.25em;
   flex: 1 0 0;
 `;
+
+const ProjectGithub = styled.a`
+  &:link,
+  &:visited {
+    color: #dfc4ea;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 2.5em;
+    padding: 0 0.4em;
+    margin-bottom: 0;
+    transition: all 0.4s;
+
+    &:not(:last-of-type) {
+      margin-right: 5px;
+    }
+  }
+
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+    fill: #dfc4ea !important;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    svg {
+      fill: #fff !important;
+      transform: translateY(-1px);
+    }
+  }
+`;
 const ProjectLinkActive = styled.a`
   &:link,
   &:visited {
@@ -31,23 +63,28 @@ const ProjectLinkActive = styled.a`
     padding: 0 0.4em;
     margin-bottom: 0;
     transition: all 0.4s;
+
+    &:not(:last-of-type) {
+      margin-right: 5px;
+    }
   }
-  &:hover {
-    transform: scale(1.2);
+
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+    fill: ${(props: { active: string }) => props.active} !important;
+    transition: all 0.4s;
   }
-`;
-const ProjectLinkNotActive = styled.span`
-  color: #aaa;
-  font-size: 2.5em;
-  padding: 0 0.4em;
-  margin-bottom: 0;
-  transition: all 0.4s;
 
   &:hover {
-    transform: scale(1) !important;
+    svg {
+      fill: ${(props: { active: string }) =>
+        props.active === '#dfc4ea' ? '#fff' : props.active} !important;
+      transform: ${(props: { active: string }) =>
+        props.active === '#dfc4ea' ? 'translateY(-1px)' : 'none'};
+    }
   }
 `;
-
 const ProjectMainImg = styled.img`
   width: 100%;
   height: 100%;
@@ -145,16 +182,16 @@ export const SingleProject = ({ project }: { project: any }) => {
     <Figure>
       <ProjectInfo>
         <ProjectName>{project.title}</ProjectName>
-        <ProjectLinkActive href={project.github} target='_blanc'>
-          Github
+        <ProjectGithub href={project.github} target='_blanc'>
+          <GithubIcon className='project-icon' />
+        </ProjectGithub>
+        <ProjectLinkActive
+          active={project.online ? '#dfc4ea' : '#aaa'}
+          href={project.online ? project.url : '#'}
+          target='_blanc'
+        >
+          <ProjectOnlineIcon className='project-icon' />
         </ProjectLinkActive>
-        {project.online ? (
-          <ProjectLinkActive href={project.url} target='_blanc'>
-            Online
-          </ProjectLinkActive>
-        ) : (
-          <ProjectLinkNotActive>Not online</ProjectLinkNotActive>
-        )}
       </ProjectInfo>
 
       <ProjectOverview>
