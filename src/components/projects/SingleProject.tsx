@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GithubIcon, ProjectOnlineIcon } from '../../img/Svgs';
+
 //import { Context } from '../Wrapper';
 
 const Figure = styled.figure`
@@ -122,7 +123,7 @@ const ProjectDescription = styled.div`
 
   font-size: 2.5em;
   color: #dfc4ea;
-  border-bottom: 1px solid #dfc4ea;
+  border-bottom: 1px solid #ccc;
 
   span {
     padding: 0 1rem;
@@ -161,7 +162,7 @@ const ProjectInDevelopment = styled.div`
   border: none;
   padding: 5px 15px;
   font-size: 2em;
-  background: linear-gradient(45deg, rgb(26, 83, 255), rgb(26, 83, 255));
+  background: linear-gradient(265deg, rgb(26, 83, 255), rgb(26, 83, 255));
 `;
 const ProjectOverview = styled.div`
   position: relative;
@@ -169,7 +170,7 @@ const ProjectOverview = styled.div`
   &:hover > ${ProjectDetails} {
     display: flex;
     z-index: 3;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9));
     transition: all 0.1s;
   }
 `;
