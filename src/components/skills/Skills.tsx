@@ -1,19 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
+//import { useMediaQuery } from 'react-responsive';
 
 import { Heading } from '../Heading';
 import { frontendData, backendData, toolsData } from './skillsData';
 import { SkillsContainer } from './SkillsContainer';
 
-const Roll = require('react-reveal/Roll');
-const Fade = require('react-reveal/Fade');
-
 const SkillsWrapper = styled.section`
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   padding: 7em 0;
 `;
 const Content = styled.div`
@@ -38,57 +37,27 @@ const A = styled.a`
   }
 `;
 export const Skills = () => {
-  const isIPadOrSmaller = useMediaQuery({ query: '(max-width: 1024px)' });
+  //const isIPadOrSmaller = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
     <SkillsWrapper id='skills'>
       <Heading text='Skills' />
       <Content>
-        {!isIPadOrSmaller ? (
-          <Roll left>
-            <SkillsContainer
-              data={frontendData}
-              title='front-end'
-              animationDelay='1s'
-            />
-          </Roll>
-        ) : (
-          <SkillsContainer
-            data={frontendData}
-            title='front-end'
-            animationDelay='1s'
-          />
-        )}
-        {!isIPadOrSmaller ? (
-          <Fade bottom>
-            <SkillsContainer
-              data={backendData}
-              title='back-end'
-              animationDelay='2.5s'
-            />
-          </Fade>
-        ) : (
-          <SkillsContainer
-            data={backendData}
-            title='back-end'
-            animationDelay='2.5s'
-          />
-        )}
-        {!isIPadOrSmaller ? (
-          <Roll right>
-            <SkillsContainer
-              data={toolsData}
-              title='tools&others'
-              animationDelay='4s'
-            />
-          </Roll>
-        ) : (
-          <SkillsContainer
-            data={toolsData}
-            title='tools&others'
-            animationDelay='4s'
-          />
-        )}
+        <SkillsContainer
+          data={frontendData}
+          title='front-end'
+          animationDelay='1s'
+        />
+        <SkillsContainer
+          data={backendData}
+          title='back-end'
+          animationDelay='2.5s'
+        />
+        <SkillsContainer
+          data={toolsData}
+          title='tools&others'
+          animationDelay='4s'
+        />
       </Content>
       <SPAN>
         Full list of technologies I work with you can find by clicking this{' '}

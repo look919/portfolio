@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const AboutMeWrapper = styled.section`
   width: 50%;
@@ -31,6 +32,12 @@ const ButtonContainer = styled.div`
   align-items: center;
   margin-top: 2em;
 `;
+const ScrollLink = styled(Link)`
+  &:not(:last-of-type) {
+    margin-right: 3em;
+  }
+`;
+
 const Button = styled.button`
   position: relative;
   background-color: transparent;
@@ -60,9 +67,7 @@ const Button = styled.button`
   &:focus {
     outline: none;
   }
-  &:not(:last-of-type) {
-    margin-right: 3em;
-  }
+
   &:hover {
     color: #000;
     background-color: #ccc;
@@ -80,8 +85,12 @@ export const AboutMe = () => {
         Developer, so I work hard everyday to become one.
       </Span>
       <ButtonContainer>
-        <Button>Explore Work</Button>
-        <Button>View Profile</Button>
+        <ScrollLink to='projects' spy={true} smooth={true} duration={1500}>
+          <Button>Explore Work</Button>
+        </ScrollLink>
+        <ScrollLink to='projects' spy={true} smooth={true} duration={1500}>
+          <Button>View profile</Button>
+        </ScrollLink>
       </ButtonContainer>
     </AboutMeWrapper>
   );
