@@ -5,7 +5,7 @@ import { H1, Text } from '../layout/defaultStyles';
 
 const HeaderContainer = styled.header`
   position: absolute;
-  top: 1.5rem;
+  top: 2.5rem;
   left: 4rem;
   height: 12em;
   display: flex;

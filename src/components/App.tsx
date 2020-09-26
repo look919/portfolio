@@ -5,7 +5,8 @@ import './app.css';
 import { Nav } from './layout/Nav';
 import { Header } from './layout/Header';
 
-// import { Skills } from './skills/Skills';
+import { WelcomePage } from './welcomePage/WelcomePage';
+import { Skills } from './skills/Skills';
 // import { Projects } from './projects/Projects';
 
 export const App = () => (
@@ -15,7 +16,8 @@ export const App = () => (
       <Nav />
       <Switch>
         <Route path='/' component={WelcomePage} exact={true} />
-        {/* <Route path='/skills' component={SkillsPage} />
+        <Route path='/skills' component={Skills} />
+        {/*
         <Route path='/projects' component={ProjectsPage} />
         <Route path='/contact' component={ContactPage} />
         <Route component={NotFoundPage} /> */}

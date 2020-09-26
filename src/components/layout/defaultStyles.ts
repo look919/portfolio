@@ -1,4 +1,27 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+export const showUp = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
+export const Page = styled.main`
+  position: relative;
+  margin: 0;
+  margin-top: 16em;
+  margin-bottom: 8em;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+`;
 
 export const H1 = styled.h1`
   font-size: 7.5em;

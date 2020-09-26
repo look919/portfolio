@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { showUp } from './defaultStyles';
 
 import { Link } from 'react-router-dom';
 import {
@@ -14,17 +15,9 @@ interface NavItemProps {
   textofprevious: string;
 }
 
-const showUp = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
 const NavWrapper = styled.nav`
   position: fixed;
+  z-index: 100;
   top: 0;
   right: 0;
   height: 12em;

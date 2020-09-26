@@ -87,6 +87,7 @@ const SkillsBox = styled.div`
   flex-direction: column;
   padding: 5em 3em;
   padding-bottom: 0;
+  margin-top: ${(props: { marTop: boolean }) => (props.marTop ? '-2em' : '0')};
 
   transition: all 0.5s;
 
@@ -116,14 +117,16 @@ interface SkillsContainerProps {
   data: { icon: any; fillColor: string; text: string }[];
   title: string;
   animationDelay: string;
+  isInTheMiddle?: boolean;
 }
 
 export const SkillsContainer = ({
   data,
   title,
   animationDelay,
+  isInTheMiddle = false,
 }: SkillsContainerProps) => (
-  <SkillsBox>
+  <SkillsBox marTop={isInTheMiddle}>
     <TitleContainer delay={animationDelay}>
       <StarIcon />
       <h3>{title}</h3>

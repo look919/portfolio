@@ -12,6 +12,8 @@ const AboutMeWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  transition: all 1s;
 `;
 
 const ScrollLink = styled(Link)`
