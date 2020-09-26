@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
-import { H1, Text } from '../layout/defaultStyles';
+import { H1, Text, showUp } from '../layout/defaultStyles';
 
 const HeaderContainer = styled.header`
   position: absolute;
@@ -10,6 +10,8 @@ const HeaderContainer = styled.header`
   height: 12em;
   display: flex;
   flex-direction: column;
+
+  animation: ${showUp} 1.5s ease-out 0.25s both;
 `;
 const SmallerMarginTop = styled.div`
   margin-top: -0.5em;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Page, Text } from '../layout/defaultStyles';
+import { Page, Text, A } from '../layout/defaultStyles';
 //import { useMediaQuery } from 'react-responsive';
 
 import { frontendData, backendData, toolsData } from './skillsData';
@@ -12,13 +12,6 @@ const Content = styled.div`
   width: 70%;
 `;
 
-const A = styled.a`
-  &:visited,
-  &:link {
-    color: #fff;
-    font-weight: 100;
-  }
-`;
 export const Skills = () => {
   //const isIPadOrSmaller = useMediaQuery({ query: '(max-width: 1024px)' });
 
@@ -46,7 +39,8 @@ export const Skills = () => {
         Full list of technologies I work with you can find by clicking this{' '}
         <A
           href='https://docs.google.com/document/d/1UUktoP11nRqgAhTEppao9B58RL6dvOz4u9B0DO5Lt74/edit?usp=sharing'
-          target='_blanc'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           link.
         </A>
