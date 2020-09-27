@@ -48,6 +48,11 @@ export const Text = styled.span`
 
   animation: ${showUp} 1s ease-out 1s both;
 `;
+export const HighlitedText = styled.span`
+  color: #fff;
+  font-weight: 100;
+`;
+
 export const A = styled.a`
   &:visited,
   &:link {
@@ -74,6 +79,8 @@ export const Button = styled.button`
   text-transform: uppercase;
   cursor: pointer;
 
+  transition: all 0.2s;
+
   &::after {
     position: absolute;
     content: '';
@@ -95,5 +102,58 @@ export const Button = styled.button`
   &:hover {
     color: #000;
     background-color: #ccc;
+  }
+  &:disabled {
+    color: #343;
+  }
+`;
+export const Form = styled.form`
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+`;
+export const InputContainer = styled.div`
+  position: relative;
+  width: 100%;
+  padding: 0 0.5rem;
+  padding-top: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+`;
+export const Placeholder = styled.span`
+  margin-right: 7px;
+`;
+export const Input = styled.input`
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: white;
+
+  font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
+    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+  &:focus {
+    outline: none;
+  }
+`;
+export const TextArea = styled.textarea`
+  resize: none;
+  height: 12rem;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: white;
+  padding: 0.6rem 0.5rem;
+  padding-bottom: 2px;
+  font-size: 1.1rem;
+  font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
+    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+  &:focus {
+    outline: none;
   }
 `;

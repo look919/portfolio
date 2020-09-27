@@ -146,7 +146,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/skills'
-          activeStyle={{ fill: '#fff' }}
+          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Home'
         >
@@ -154,7 +154,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/projects'
-          activeStyle={{ fill: '#fff' }}
+          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Skills'
         >
@@ -162,7 +162,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/contact'
-          activeStyle={{ fill: '#fff' }}
+          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Projects'
         >
@@ -170,7 +170,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/'
-          activeStyle={{ fill: '#fff' }}
+          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Contact'
         >
