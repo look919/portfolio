@@ -2,58 +2,15 @@ import React, { useState } from 'react';
 import validator from 'validator';
 
 import styled from 'styled-components';
-import { Button } from '../layout/defaultStyles';
+import {
+  Form,
+  InputContainer,
+  Placeholder,
+  Input,
+  TextArea,
+  Button,
+} from '../layout/defaultStyles';
 
-const Form = styled.form`
-  width: 30rem;
-  display: flex;
-  flex-direction: column;
-`;
-const InputContainer = styled.div`
-  position: relative;
-  width: 100%;
-  padding: 0 0.5rem;
-  padding-top: 4px;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-`;
-const Placeholder = styled.span`
-  margin-right: 7px;
-`;
-const Input = styled.input`
-  height: 100%;
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  font-size: 1.2rem;
-  color: white;
-
-  font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
-    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-
-  &:focus {
-    outline: none;
-  }
-`;
-const TextArea = styled.textarea`
-  resize: none;
-  height: 12rem;
-  background-color: transparent;
-  border: 1px solid #ccc;
-  color: white;
-  padding: 0.6rem 0.5rem;
-  padding-bottom: 2px;
-  font-size: 1.1rem;
-  font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
-    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-
-  &:focus {
-    outline: none;
-  }
-`;
 const BottomContainer = styled.div`
   width: 100%;
   margin-top: 0.5rem;
