@@ -112,8 +112,6 @@ export const ContactForm = () => {
 
   const buttonDisabled: boolean =
     !formData.message || !formData.email || !!formData.status;
-  console.log(!formData.message, !formData.email, !!formData.status);
-  console.log(buttonDisabled);
 
   return (
     <Form
