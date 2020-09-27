@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+
 import { Page, Text, HighlitedText } from '../layout/defaultStyles';
+import { ContactForm } from './ContactForm';
 
 export const Contact = () => {
   return (
     <Page>
-      <p>test</p>
-
+      <ContactForm />
       <Text>
         You can also contact me directly by sending email to{' '}
         <HighlitedText>wirkus919@gmail.com</HighlitedText>. I'm open for any

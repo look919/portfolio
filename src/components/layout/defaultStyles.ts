@@ -79,6 +79,8 @@ export const Button = styled.button`
   text-transform: uppercase;
   cursor: pointer;
 
+  transition: all 0.2s;
+
   &::after {
     position: absolute;
     content: '';
@@ -100,5 +102,8 @@ export const Button = styled.button`
   &:hover {
     color: #000;
     background-color: #ccc;
+  }
+  &:disabled {
+    color: #343;
   }
 `;
