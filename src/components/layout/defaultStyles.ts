@@ -48,6 +48,11 @@ export const Text = styled.span`
 
   animation: ${showUp} 1s ease-out 1s both;
 `;
+export const HighlitedText = styled.span`
+  color: #fff;
+  font-weight: 100;
+`;
+
 export const A = styled.a`
   &:visited,
   &:link {
