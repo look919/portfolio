@@ -18,7 +18,7 @@ const BottomContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const Text = styled.span`
+const Status = styled.span`
   font-size: 1.2rem;
   color: #ccc;
   font-weight: 100;
@@ -34,6 +34,15 @@ export const ContactForm = () => {
     message: '',
     status: '',
   });
+
+  const clearStatus = () => {
+    setTimeout(() => {
+      setFormData({
+        ...formData,
+        status: '',
+      });
+    }, 2500);
+  };
 
   const submitForm = (e: React.BaseSyntheticEvent) => {
     e.preventDefault();
@@ -60,12 +69,7 @@ export const ContactForm = () => {
         message: '',
       });
 
-      setTimeout(() => {
-        setFormData({
-          ...formData,
-          status: '',
-        });
-      }, 2500);
+      clearStatus();
     } else if (message.length <= 7 || !message.includes(' ')) {
       setFormData({
         ...formData,
@@ -84,23 +88,14 @@ export const ContactForm = () => {
         status: 'NO_SUBJECT',
       });
 
-      setTimeout(() => {
-        setFormData({
-          ...formData,
-          status: '',
-        });
-      }, 2500);
+      clearStatus();
     } else {
       setFormData({
         ...formData,
         status: 'ERROR',
       });
-      setTimeout(() => {
-        setFormData({
-          ...formData,
-          status: '',
-        });
-      }, 2500);
+
+      clearStatus();
     }
   };
 
@@ -144,15 +139,15 @@ export const ContactForm = () => {
 
       <BottomContainer>
         {formData.status === 'ERROR' ? (
-          <Text>An Error, please make sure u provided valid email.</Text>
+          <Status>An Error, please make sure u provided valid email.</Status>
         ) : formData.status === 'SHORT_MESSAGE' ? (
-          <Text>I asked you to leave me a message, not a test spam.</Text>
+          <Status>I asked you to leave me a message, not a test spam.</Status>
         ) : formData.status === 'NO_SUBJECT' ? (
-          <Text>Please provide a subject!</Text>
+          <Status>Please provide a subject!</Status>
         ) : formData.status === 'SUCCESS' ? (
-          <Text>Thanks!</Text>
+          <Status>Thanks!</Status>
         ) : (
-          <Text>&nbsp;</Text>
+          <Status>&nbsp;</Status>
         )}
 
         <Button disabled={buttonDisabled}>Submit</Button>
