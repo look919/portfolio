@@ -3,7 +3,13 @@ import { IntlProvider } from 'react-intl';
 import English from './en.json';
 import Polish from './pl.json';
 
-export const Context = React.createContext({});
+interface AppContextInterface {
+  selectLang: Function;
+  locale: string;
+  getLang: Function;
+}
+
+export const Context = React.createContext<AppContextInterface | null>(null);
 let local = localStorage.getItem('lang') || 'en';
 
 let lang: {};

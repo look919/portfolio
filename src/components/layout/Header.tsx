@@ -3,13 +3,7 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import Typist from 'react-typist';
 
-import { H1, Text, showUp } from '../layout/defaultStyles';
-
-export const TypedH1 = styled(Typist)`
-  font-size: 4.8rem;
-  font-weight: 100;
-  margin-left: -7px;
-`;
+import { Text, showUp } from '../layout/defaultStyles';
 
 const HeaderContainer = styled.header`
   position: absolute;
@@ -19,6 +13,11 @@ const HeaderContainer = styled.header`
   flex-direction: column;
 
   animation: ${showUp} 1.5s ease-out 0.25s both;
+`;
+export const TypedH1 = styled(Typist)`
+  font-size: 4.8rem;
+  font-weight: 100;
+  margin-left: -7px;
 `;
 const PageTitle = styled.h1`
   font-size: 4.8rem;

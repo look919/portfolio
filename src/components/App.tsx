@@ -2,8 +2,9 @@ import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './app.css';
 
-import { Nav } from './layout/Nav';
 import { Header } from './layout/Header';
+import { LanguageSelector } from './layout/LanguageSelector';
+import { Nav } from './layout/Nav';
 
 import { WelcomePage } from './welcomePage/WelcomePage';
 import { Skills } from './skills/Skills';
@@ -14,6 +15,7 @@ export const App = () => (
   <BrowserRouter>
     <Fragment>
       <Header />
+      <LanguageSelector />
       <Nav />
       <Switch>
         <Route path='/' component={WelcomePage} exact={true} />

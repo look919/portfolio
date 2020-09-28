@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { H1, H2, Text, ButtonContainer, Button } from '../layout/defaultStyles';
+import { FormattedMessage } from 'react-intl';
 
 const WelcomePageWrapper = styled.section`
   width: 50%;
