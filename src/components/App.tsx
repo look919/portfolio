@@ -11,20 +11,22 @@ import { Skills } from './skills/Skills';
 import { Projects } from './projects/Projects';
 import { Contact } from './contact/Contact';
 
-export const App = () => (
-  <BrowserRouter>
-    <Fragment>
-      <Header />
-      <LanguageSelector />
-      <Nav />
-      <Switch>
-        <Route path='/' component={WelcomePage} exact={true} />
-        <Route path='/skills' component={Skills} />
-        <Route path='/projects' component={Projects} />
-        <Route path='/contact' component={Contact} />
-        {/*
+export const App = () => {
+  return (
+    <BrowserRouter>
+      <Fragment>
+        <Header />
+        <LanguageSelector />
+        <Nav />
+        <Switch>
+          <Route path='/' component={WelcomePage} exact={true} />
+          <Route path='/skills' component={Skills} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/contact' component={Contact} />
+          {/*
         <Route component={NotFoundPage} /> */}
-      </Switch>
-    </Fragment>
-  </BrowserRouter>
-);
+        </Switch>
+      </Fragment>
+    </BrowserRouter>
+  );
+};

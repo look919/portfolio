@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Typist from 'react-typist';
 
 import { Text, showUp } from '../layout/defaultStyles';
+import { FormattedMessage } from 'react-intl';
 
 const HeaderContainer = styled.header`
   position: absolute;
@@ -36,9 +37,27 @@ const _Header = ({ history }: RouteComponentProps) => {
 
   if (history.location.pathname === '/') return null;
 
+  let lang = localStorage.getItem('lang') || 'en';
   const page =
     history.location.pathname[1].toUpperCase() +
     history.location.pathname.substring(2);
+  let heading = '';
+  if (lang === 'pl') {
+    switch (page) {
+      case 'Skills':
+        heading = 'Umiejętności';
+        break;
+      case 'Projects':
+        heading = 'Projekty';
+        break;
+      case 'Contact':
+        heading = 'Kontakt';
+        break;
+      default:
+        heading = '';
+        break;
+    }
+  }
 
   const cursor = {
     show: true,
@@ -48,8 +67,9 @@ const _Header = ({ history }: RouteComponentProps) => {
     hideWhenDoneDelay: 0,
   };
 
-  history.listen((location) => {
+  history.listen(() => {
     setTypistDone(false);
+    lang = localStorage.getItem('lang') || 'en';
   });
 
   return (
@@ -58,12 +78,14 @@ const _Header = ({ history }: RouteComponentProps) => {
         <TypedH1
           startDelay={1000}
           cursor={cursor}
-          onTypingDone={() => setTimeout(() => setTypistDone(true), 1)}
+          onTypingDone={() => setTimeout(() => setTypistDone(true), 100)}
         >
-          {page}
+          {heading}
         </TypedH1>
       ) : (
-        <PageTitle>{page}</PageTitle>
+        <PageTitle>
+          <FormattedMessage id={`Nav.${page}`} defaultMessage={page} />
+        </PageTitle>
       )}
 
       <SmallerMarginTop>
