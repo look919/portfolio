@@ -23,7 +23,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-https-redirect": "^1.1.0",
-    "react-intl": "^5.8.2",
+    "react-intl": "5.8.2",
     "react-responsive": "^8.1.0",
     "react-responsive-carousel": "^3.2.10",
     "react-router-dom": "^5.2.0",
@@ -31,7 +31,7 @@
     "react-select": "^3.1.0",
     "react-typist": "^2.0.5",
     "styled-components": "^5.2.0",
-    "typescript": "~3.7.2",
+    "typescript": "3.8",
     "uuid": "^8.3.0",
     "validator": "^13.1.17"
   },
@@ -60,5 +60,6 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "react-test-renderer": "^16.13.1"
-  }
+  },
+  "peerDependencies": {}
 }
