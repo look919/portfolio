@@ -66,3 +66,95 @@
 .control-arrow:hover {
   background: rgba(#000, 1) !important;
 }
+
+/*lang selector */
+.select {
+  cursor: pointer !important;
+  width: 100%;
+  height: 3rem;
+
+  border: none !important;
+  background-color: inherit !important;
+  transition: all 0.3s;
+}
+.css-yk16xz-control,
+.css-1pahdxg-control {
+  background-color: inherit !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  padding: 3px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.css-yk16xz-control:focus,
+.css-1pahdxg-control:focus,
+.css-yk16xz-control:hover,
+.css-1pahdxg-control:hover {
+  background-color: hsl(271, 23%, 6%) !important;
+}
+.css-g1d714-ValueContainer {
+  padding: 0 !important;
+  border: none !important;
+  background-color: inherit !important;
+  cursor: pointer !important;
+  height: 3rem !important;
+  width: 3rem !important;
+  display: flex !important;
+  align-items: center;
+  flex: 1 !important;
+
+  justify-content: center;
+}
+.css-g1d714-ValueContainer:focus,
+.css-g1d714-ValueContainer:hover {
+  background-color: hsl(271, 23%, 6%) !important;
+  border: none !important;
+}
+.css-1hb7zxy-IndicatorsContainer {
+  width: 1rem !important;
+  padding: 0 !important;
+  display: flex;
+  flex: 0;
+  margin-top: 0 3px !important;
+}
+#root
+  > div
+  > div
+  > header
+  > div
+  > div
+  > div.css-1hb7zxy-IndicatorsContainer
+  > div {
+  padding: 8px !important;
+}
+.css-1uccc91-singleValue {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+.css-1hb7zxy-IndicatorsContainer > span {
+  display: none !important;
+}
+.css-1gtu0rj-indicatorContainer,
+.css-tlfecz-indicatorContainer {
+  padding: 0 !important;
+}
+.css-6q0nyr-Svg {
+  fill: #fff !important;
+}
+.css-2613qy-menu {
+  pointer-events: none !important;
+  display: flex;
+}
+.css-yt9ioa-option,
+.css-9gakcf-option,
+.css-1n7v3ny-option {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

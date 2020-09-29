@@ -1,0 +1,20 @@
+{
+  "WelcomePage.Description": "Hi. I am very pleased to welcome you on my website. I am into web programming for one and a half years and my goal is to become MERN Stack Developer, so I work hard everyday to become one.",
+  "WelcomePage.ExploreBtn": "Explore work",
+  "WelcomePage.ViewProfileBtn": "View Profile",
+  "Skills.Text": "Full list of technologies I work with you can find by clicking this ",
+  "Skills.TextLink": "link.",
+  "Skills.Frontend": "Front-end",
+  "Skills.Backend": "Back-end",
+  "Skills.Others": "TOOLS&OTHERS",
+  "Projects.Text": "All the projects in the portfolio I created 100% by myself. ",
+  "Projects.TextLink": "Take a look how i write my code.",
+  "Contact.Subject": "Subject: ",
+  "Contact.SubmitSuccess": "Thanks!",
+  "Contact.SubmitError": "An Error, please make sure u provided valid email.",
+  "Contact.Spam": "I asked you to leave me a message, not a test spam :)",
+  "Contact.NoSubject": "Please provide a subject!",
+  "Contact.Btn": "Submit",
+  "Contact.TextOne": "You can also contact me directly by sending email to ",
+  "Contact.TextTwo": " I'm open for any form of cooperation."
+}

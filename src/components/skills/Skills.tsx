@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Page, Text, A } from '../layout/defaultStyles';
+import { Page, Info, A } from '../layout/defaultStyles';
+import { FormattedMessage } from 'react-intl';
 //import { useMediaQuery } from 'react-responsive';
 
 import { frontendData, backendData, toolsData } from './skillsData';
@@ -20,31 +21,34 @@ export const Skills = () => {
       <Content>
         <SkillsContainer
           data={frontendData}
-          title='front-end'
+          title='Skills.Frontend'
           animationDelay='1s'
         />
         <SkillsContainer
           data={backendData}
-          title='back-end'
+          title='Skills.Backend'
           animationDelay='2.5s'
           isInTheMiddle={true}
         />
         <SkillsContainer
           data={toolsData}
-          title='tools&others'
+          title='Skills.Others'
           animationDelay='4s'
         />
       </Content>
-      <Text>
-        Full list of technologies I work with you can find by clicking this{' '}
+      <Info>
+        <FormattedMessage
+          id='Skills.Text'
+          defaultMessage='Full list of technologies I work with you can find by clicking this '
+        />
         <A
           href='https://docs.google.com/document/d/1UUktoP11nRqgAhTEppao9B58RL6dvOz4u9B0DO5Lt74/edit?usp=sharing'
           target='_blank'
           rel='noopener noreferrer'
         >
-          link.
+          <FormattedMessage id='Skills.TextLink' defaultMessage='link.' />
         </A>
-      </Text>
+      </Info>
     </Page>
   );
 };

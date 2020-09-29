@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { H1, H2, Text, ButtonContainer, Button } from '../layout/defaultStyles';
+import { H1, H2, Info, ButtonContainer, Button } from '../layout/defaultStyles';
+import { FormattedMessage } from 'react-intl';
 
 const WelcomePageWrapper = styled.section`
   width: 50%;
@@ -27,17 +28,30 @@ export const WelcomePage = () => {
     <WelcomePageWrapper>
       <H1>Tomasz Wirkus</H1>
       <H2>FullStack Developer</H2>
-      <Text>
-        Hi. I am very pleased to welcome you on my website. I am into web
+      <Info>
+        <FormattedMessage
+          id='WelcomePage.Description'
+          defaultMessage=' Hi. I am very pleased to welcome you on my website. I am into web
         programming for one and a half years and my goal is to become MERN Stack
-        Developer, so I work hard everyday to become one.
-      </Text>
+        Developer, so I work hard everyday to become one.'
+        />
+      </Info>
       <ButtonContainer>
         <ScrollLink to='/projects'>
-          <Button>Explore Work</Button>
+          <Button>
+            <FormattedMessage
+              id='WelcomePage.ExploreBtn'
+              defaultMessage='Explore Work'
+            />
+          </Button>
         </ScrollLink>
         <ScrollLink to='/projects'>
-          <Button>View profile</Button>
+          <Button>
+            <FormattedMessage
+              id='WelcomePage.ViewProfileBtn'
+              defaultMessage='View Profile'
+            />
+          </Button>
         </ScrollLink>
       </ButtonContainer>
     </WelcomePageWrapper>

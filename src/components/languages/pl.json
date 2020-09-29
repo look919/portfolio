@@ -1,0 +1,20 @@
+{
+  "WelcomePage.Description": "Cześć. Bardzo mi miło mi powitać cię na mojej stronie. Programowaniem stron internetowych bawię się od półtora roku i moim celem jest zostać MERN Stack Developerem, toteż codziennie dokładam cegiełkę aby nim zostać.",
+  "WelcomePage.ExploreBtn": "Projekty",
+  "WelcomePage.ViewProfileBtn": "Profil",
+  "Skills.Text": "Pełną listę technologii, z którymi pracuję możesz znaleźć pod tym ",
+  "Skills.TextLink": "linkiem.",
+  "Skills.Frontend": "Front-end",
+  "Skills.Backend": "Back-end",
+  "Skills.Others": "Inne",
+  "Projects.Text": "Wszystkie projekty napisałem w 100% samemu. ",
+  "Projects.TextLink": "Zobacz jak piszę kod.",
+  "Contact.Subject": "Temat: ",
+  "Contact.SubmitSuccess": "Dziękuję!",
+  "Contact.SubmitError": "Error, sprawdź podany adres email.",
+  "Contact.Spam": "Poprosiłem o wiadomość, a nie testowy spam :)",
+  "Contact.NoSubject": "Podaj tytuł!",
+  "Contact.Btn": "Wyślij",
+  "Contact.TextOne": "Możesz również skontaktować się ze mną wysyłając maila na adres ",
+  "Contact.TextTwo": " Jestem otwarty na wszelkie formy kooperacji."
+}

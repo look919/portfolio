@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { showUp } from './defaultStyles';
 
-import { NavLink } from 'react-router-dom';
 import {
   HomeIcon,
   SkillsIcon,
@@ -88,7 +88,7 @@ const NavIcons = styled.div`
   transition: height 0.5s;
 `;
 const ScrollLink = styled(NavLink)`
-  fill: #ccc;
+  fill: #fff;
   width: 1.6rem;
   margin: 0.8rem 0;
   height: ${(props: NavItemProps) => props.hght || '0'};
@@ -137,8 +137,9 @@ export const Nav = () => {
 
       <NavIcons id='nav-icons' hght={isOpen ? '12.5rem' : '0'}>
         <ScrollLink
+          exact={true}
           to='/'
-          activeStyle={{ fill: '#ccc' }}
+          activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious=''
         >
@@ -146,7 +147,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/skills'
-          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
+          activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Home'
         >
@@ -154,7 +155,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/projects'
-          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
+          activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Skills'
         >
@@ -162,7 +163,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/contact'
-          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
+          activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Projects'
         >
@@ -170,7 +171,7 @@ export const Nav = () => {
         </ScrollLink>
         <ScrollLink
           to='/'
-          activeStyle={{ fill: '#fff', pointerEvents: 'none' }}
+          activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Contact'
         >

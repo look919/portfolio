@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Page, Text, A } from '../layout/defaultStyles';
+import { Page, Info, A } from '../layout/defaultStyles';
+import { FormattedMessage } from 'react-intl';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -25,17 +26,22 @@ export const Projects = () => {
         </Carousel>
       </CarouselContainer>
 
-      <Text>
-        All the projects in the portfolio I created 100% by myself.{' '}
+      <Info>
+        <FormattedMessage
+          id='Projects.Text'
+          defaultMessage='All the projects in the portfolio I created 100% by myself. '
+        />
         <A
           href='https://github.com/look919'
           target='_blank'
           rel='noopener noreferrer'
         >
-          Take a look how i write my code
+          <FormattedMessage
+            id='Projects.TextLink'
+            defaultMessage='Take a look how i write my code.'
+          />
         </A>
-        .
-      </Text>
+      </Info>
     </Page>
   );
 };

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { GithubIcon, ProjectOnlineIcon } from '../../img/Svgs';
+import { Context } from '../languages/Wrapper';
 
 //import { Context } from '../Wrapper';
 
@@ -115,8 +116,15 @@ const ProjectDescription = styled.div`
   color: #dfc4ea;
   border-bottom: 1px solid #ccc;
 
-  span {
+  p {
     padding: 0 1rem;
+  }
+`;
+const ProjectDescriptionLink = styled.a`
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: #fff;
   }
 `;
 
@@ -162,8 +170,10 @@ const ProjectOverview = styled.div`
 `;
 
 export const SingleProject = ({ project }: { project: any }) => {
-  //const context = useContext(Context);
-  //const lang = context.getLang();
+  const context = useContext(Context);
+
+  if (!context) return null;
+  const lang = context.getLang();
 
   return (
     <Figure>
@@ -189,7 +199,28 @@ export const SingleProject = ({ project }: { project: any }) => {
         />
         <ProjectDetails>
           <ProjectDescription>
-            <span>{project.descriptionEn}</span>
+            <p>
+              {lang === 'en' ? project.descriptionEn : project.descriptionPl}
+
+              {lang === 'en' && project.title === 'ResumeGenerator' && (
+                <ProjectDescriptionLink
+                  href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  resume.
+                </ProjectDescriptionLink>
+              )}
+              {lang === 'pl' && project.title === 'ResumeGenerator' && (
+                <ProjectDescriptionLink
+                  href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  CV.
+                </ProjectDescriptionLink>
+              )}
+            </p>
           </ProjectDescription>
           <ProjectTechnologies
             width={project.imgHover.length > 2 ? '70%' : '35%'}
@@ -213,29 +244,3 @@ export const SingleProject = ({ project }: { project: any }) => {
     </Figure>
   );
 };
-
-/*
-This I'm going to rewrite after I add language selector to the project
-
-line ~ 34 project description languge
-
-{lang === 'en' ? project.descriptionEn : project.descriptionPl}
-{lang === 'en' && project.title === 'ResumeGenerator' && (
-  <a
-    href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
-    target='_blank'
-    rel='noopener noreferrer'
-  >
-    resume.
-  </a>
-)}
-{lang === 'pl' && project.title === 'ResumeGenerator' && (
-  <a
-    href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
-    target='_blank'
-    rel='noopener noreferrer'
-  >
-    CV.
-  </a>
-)}
-*/
