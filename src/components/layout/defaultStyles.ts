@@ -1,5 +1,14 @@
 import styled, { keyframes } from 'styled-components';
 
+export const device = {
+  desktop: '(max-width: 100em)',
+  laptopL: '(max-width: 90em)',
+  laptop: '(max-width: 80em)',
+  tablet: '(max-width: 64em)',
+  mobileL: '(max-width: 30em)',
+  mobile: '(max-width: 25em)',
+};
+
 export const showUp = keyframes`
   from {
     opacity: 0;
