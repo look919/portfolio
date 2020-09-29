@@ -1,6 +1,9 @@
 import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+
+import { Profile } from './Profile';
 import {
   device,
   H1,
@@ -9,9 +12,6 @@ import {
   Button,
   showUp,
 } from '../layout/defaultStyles';
-import { FormattedMessage } from 'react-intl';
-
-import { Profile } from './Profile';
 
 const WelcomePageWrapper = styled.section`
   width: calc(100% - 60rem);
@@ -32,6 +32,18 @@ const WelcomePageWrapper = styled.section`
   }
   @media ${device.laptop} {
     width: calc(100% - 20rem);
+  }
+  @media ${device.tabletS} {
+    width: calc(100% - 10rem);
+    left: 2.5rem;
+  }
+  @media ${device.mobileLandscape} {
+    width: calc(100% - 4rem);
+    left: 2rem;
+  }
+  @media ${device.mobileL} {
+    width: calc(100% - 2rem);
+    left: 1rem;
   }
 `;
 const WelcomPageDescription = styled.p`

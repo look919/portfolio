@@ -48,6 +48,11 @@ const SelectorContainer = styled.div`
   display: flex;
   align-items: center;
   justif-content: space-between;
+
+  @media ${device.mobileLandscape} {
+    top: 0.75rem;
+    right: 5.5rem;
+  }
 `;
 const SelectorImg = styled.img`
   height: 2rem !important;

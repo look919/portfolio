@@ -12,7 +12,6 @@ const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2rem;
-  justify-content: space-between;
   width: 75%;
 
   @media ${device.laptop} {
@@ -22,6 +21,13 @@ const Content = styled.div`
     width: 95%;
     grid-column-gap: 1.5rem;
     word-wrap: wrap;
+  }
+  @media ${device.mobileLandscape} {
+    grid-template-columns: 100%;
+    grid-column-gap: 0;
+    grid-template-rows: repeat(3, min-content);
+    justify-items: center;
+    grid-row-gap: 1rem;
   }
 `;
 

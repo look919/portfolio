@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { showUp } from './defaultStyles';
+import { device, showUp } from './defaultStyles';
 
 import {
   HomeIcon,
@@ -28,6 +28,11 @@ const NavWrapper = styled.nav`
   &:hover {
     background-color: rgb(9, 5, 24);
   }
+
+  @media ${device.mobileLandscape} {
+    height: 5rem;
+    width: 5rem;
+  }
 `;
 const NavButton = styled.button`
   width: 100%;
@@ -48,6 +53,10 @@ const NavButton = styled.button`
   &:hover > #icon::before,
   &:hover > #icon::after {
     left: 35%;
+  }
+
+  @media ${device.mobileLandscape} {
+    height: 5rem;
   }
 `;
 const NavBurger = styled.div`
@@ -86,6 +95,11 @@ const NavIcons = styled.div`
   align-items: center;
   background-color: rgb(9, 5, 24);
   transition: height 0.5s;
+
+  @media ${device.mobileLandscape} {
+    top: 5rem;
+    width: 5rem;
+  }
 `;
 const ScrollLink = styled(NavLink)`
   fill: #fff;
@@ -110,6 +124,10 @@ const ScrollLink = styled(NavLink)`
     content: '${(props) => props.textofprevious}';
 
     transition: all 1s;
+
+    @media ${device.mobileLandscape} {
+      right: 5rem;
+    }
   }
 
   &:hover + &::before {

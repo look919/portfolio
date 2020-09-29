@@ -46,6 +46,14 @@ const TitleContainer = styled.div`
   margin-bottom: 2rem;
   margin-left: -3px;
 
+  @media ${device.tabletS} {
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  @media ${device.mobileLandscape} {
+    margin-bottom: 5px;
+  }
+
   svg {
     fill: #aaa;
     height: 1.8rem;
@@ -69,6 +77,7 @@ const TitleContainer = styled.div`
     @media ${device.tabletS} {
       height: 1rem;
       width: 1rem;
+      margin-right: 0.6rem;
     }
   }
   h3 {
@@ -98,6 +107,10 @@ const ElementContainer = styled.div`
 
   &:not(:last-of-type) {
     margin-bottom: 0.6rem;
+
+    @media ${device.mobileLandscape} {
+      margin-bottom: 3px;
+    }
   }
 
   svg {
@@ -124,6 +137,7 @@ const ElementContainer = styled.div`
     @media ${device.tabletS} {
       height: 0.8rem;
       width: 0.8rem;
+      margin-right: 0.7rem;
     }
   }
   span {
@@ -152,18 +166,27 @@ const SkillsBox = styled.div`
   flex-direction: column;
   padding: 3.25rem 2rem;
   padding-bottom: 2rem;
-  margin-top: ${(props: { delay: string; marTop: boolean }) =>
-    props.marTop ? '-1.6rem' : '0'};
-  margin-bottom: ${(props: { delay: string; marTop: boolean }) =>
-    props.marTop ? '1.6rem' : '0'};
+  margin-top: ${(props: { delay: string; inTheMiddle: boolean }) =>
+    props.inTheMiddle ? '-1.6rem' : '0'};
+  margin-bottom: ${(props: { delay: string; inTheMiddle: boolean }) =>
+    props.inTheMiddle ? '1.6rem' : '0'};
 
   animation: ${backgroundFakeHoverAnimation} 2s ease
-    ${(props: { delay: string; marTop: boolean }) => props.delay};
+    ${(props: { delay: string; inTheMiddle: boolean }) => props.delay};
   transition: all 0.5s;
 
   @media ${device.laptopL} {
     padding: 2rem 1.25rem;
     padding-bottom: 1.25rem;
+  }
+  @media ${device.tabletS} {
+    padding: 1rem 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  @media ${device.mobileLandscape} {
+    margin: 0;
+    padding: 0 1.25rem;
+    padding-bottom: 0.5rem;
   }
 
   &:hover {
@@ -226,13 +249,14 @@ export const SkillsContainer = ({
   animationDelay,
   isInTheMiddle = false,
 }: SkillsContainerProps) => (
-  <SkillsBox marTop={isInTheMiddle} delay={animationDelay}>
+  <SkillsBox inTheMiddle={isInTheMiddle} delay={animationDelay}>
     <TitleContainer delay={animationDelay}>
       <StarIcon />
       <h3>
         <FormattedMessage id={title} defaultMessage='Skills' />
       </h3>
     </TitleContainer>
+
     {data.map((el) => (
       <ElementContainer fillColor={el.fillColor} key={uuidv4()}>
         {el.icon}

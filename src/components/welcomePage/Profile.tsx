@@ -15,27 +15,21 @@ const ProfileContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 38rem;
   margin-top: -2rem;
 
   transition: all 0.3s;
   animation: ${showUp} 1s ease-out 0.25s both;
 
-  @media ${device.laptopL} {
-    width: 33rem;
+  @media ${device.mobileLandscape} {
+    right: 0.5rem;
   }
 `;
 const DataContainer = styled.div`
-  width: calc(100% - 13rem);
   height: 100%;
 
   display: flex;
   flex-direction: column;
   align: items-center;
-
-  @media ${device.laptopL} {
-    width: calc(100% - 11rem);
-  }
 `;
 const SingleData = styled.div`
   display: flex;
@@ -43,16 +37,21 @@ const SingleData = styled.div`
 
   &:not(:last-of-type) {
     margin-bottom: 8px;
+
+    @media ${device.mobileLandscape} {
+      margin-bottom: 4px;
+    }
   }
 `;
 const SingleDataName = styled.p`
-  width: 9rem;
+  //width: 9rem;
   font-size: 1.5rem;
   color: #ccc;
   font-weight: 100;
+  margin-right: 0.5rem;
 
   @media ${device.laptopL} {
-    width: 8rem;
+    //width: 8rem;
   }
 `;
 const Text = styled.p`
@@ -92,6 +91,9 @@ const ImageContainer = styled.div`
 
   @media ${device.laptopL} {
     width: 11rem;
+  }
+  @media ${device.mobileLandscape} {
+    width: 8rem;
   }
 `;
 const Image = styled.img`

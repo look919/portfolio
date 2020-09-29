@@ -6,6 +6,7 @@ export const device = {
   laptop: '(max-width: 80em)',
   tablet: '(max-width: 64em)',
   tabletS: '(max-width: 50em)',
+  mobileLandscape: '(max-width: 40em)',
   mobileL: '(max-width: 30em)',
   mobile: '(max-width: 25em)',
 };
@@ -56,6 +57,10 @@ export const H1 = styled.h1`
   @media ${device.laptopL} {
     font-size: 4.4rem;
   }
+  @media ${device.mobileLandscape} {
+    font-size: 3rem;
+    margin-left: -4px;
+  }
 `;
 export const H2 = styled.h2`
   font-size: 3.2rem;
@@ -65,6 +70,9 @@ export const H2 = styled.h2`
 
   @media ${device.laptopL} {
     font-size: 3rem;
+  }
+  @media ${device.mobileLandscape} {
+    font-size: 2.2rem;
   }
 `;
 export const Text = styled.span`
@@ -122,6 +130,11 @@ export const Button = styled.button`
 
   transition: all 0.2s;
 
+  @media ${device.mobileLandscape} {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
   &::after {
     position: absolute;
     content: '';
@@ -153,6 +166,10 @@ export const Form = styled.form`
   width: 30rem;
   display: flex;
   flex-direction: column;
+
+  @media ${device.mobileLandscape} {
+    width: 90%;
+  }
 `;
 export const InputContainer = styled.div`
   position: relative;
