@@ -8,6 +8,7 @@ import {
   SkillsIcon,
   ProjectsIcon,
   ContactIcon,
+  ProfileIcon,
 } from '../../img/Svgs';
 
 interface NavItemProps {
@@ -95,11 +96,6 @@ const ScrollLink = styled(NavLink)`
   cursor: pointer;
   transition: all 0.5s;
 
-  &:first-of-type: {
-    margin: 0;
-    margin-bottom: 0.8rem;
-  }
-
   &::before {
     position: absolute;
     right: 7rem;
@@ -135,10 +131,11 @@ export const Nav = () => {
         <NavBurger id='icon' />
       </NavButton>
 
-      <NavIcons id='nav-icons' hght={isOpen ? '12.5rem' : '0'}>
+      <NavIcons id='nav-icons' hght={isOpen ? '13.75rem' : '0'}>
         <ScrollLink
           exact={true}
           to='/'
+          style={{ margin: 0, marginBottom: 0 }}
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious=''
@@ -146,10 +143,18 @@ export const Nav = () => {
           <HomeIcon className='svg-nav' />
         </ScrollLink>
         <ScrollLink
-          to='/skills'
+          to='/profile'
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
           textofprevious='Home'
+        >
+          <ProfileIcon className='svg-nav' />
+        </ScrollLink>
+        <ScrollLink
+          to='/skills'
+          activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
+          hght={isOpen ? '2em' : '0'}
+          textofprevious='Profile'
         >
           <SkillsIcon className='svg-nav' />
         </ScrollLink>
