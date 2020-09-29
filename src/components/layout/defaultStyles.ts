@@ -42,9 +42,8 @@ export const H2 = styled.h2`
 `;
 export const Text = styled.span`
   font-size: 1.5rem;
-  color: #ccc;
+  color: #fff;
   font-weight: 100;
-  margin-top: 1rem;
 
   animation: ${showUp} 1s ease-out 1s both;
 `;
