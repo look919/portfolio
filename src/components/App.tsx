@@ -23,8 +23,7 @@ export const App = () => {
           <Route exact path='/skills' component={Skills} />
           <Route path='/projects' component={Projects} exact />
           <Route path='/contact' component={Contact} exact />
-          {/*
-        <Route component={NotFoundPage} /> */}
+          <Route component={WelcomePage} />
         </Switch>
       </Fragment>
     </BrowserRouter>
