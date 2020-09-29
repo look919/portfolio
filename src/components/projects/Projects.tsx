@@ -18,6 +18,9 @@ const CarouselContainer = styled.div`
   @media ${device.laptopL} {
     width: 32rem;
   }
+  @media ${device.laptop} {
+    width: 28rem;
+  }
 `;
 
 export const Projects = () => {

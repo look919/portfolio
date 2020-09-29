@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import Typist from 'react-typist';
+import { device } from './defaultStyles';
 
 import { Text, showUp } from '../layout/defaultStyles';
 
@@ -13,22 +14,39 @@ const HeaderContainer = styled.header`
   flex-direction: column;
 
   animation: ${showUp} 1.5s ease-out 0.25s both;
+
+  @media ${device.laptopL} {
+    top: 1rem;
+    left: 3.75rem;
+  }
 `;
 export const TypedH1 = styled(Typist)`
   font-size: 4.8rem;
   font-weight: 100;
   margin-left: -7px;
+
+  @media ${device.laptopL} {
+    font-size: 4.4rem;
+  }
 `;
 const PageTitle = styled.h1`
   font-size: 4.8rem;
   font-weight: 100;
   margin-left: -7px;
+
+  @media ${device.laptopL} {
+    font-size: 4.4rem;
+  }
 `;
 const SmallerMarginTop = styled.div`
   margin-top: -0.5rem;
   margin-left: -3px;
 
   animation: ${showUp} 1s ease-out 1s both;
+
+  @media ${device.laptopL} {
+    maring-top: 0;
+  }
 `;
 
 const _Header = ({ history }: RouteComponentProps) => {

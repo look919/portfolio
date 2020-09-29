@@ -121,6 +121,8 @@ const SkillsBox = styled.div`
   padding-bottom: 2rem;
   margin-top: ${(props: { delay: string; marTop: boolean }) =>
     props.marTop ? '-1.6rem' : '0'};
+  margin-bottom: ${(props: { delay: string; marTop: boolean }) =>
+    props.marTop ? '1.6rem' : '0'};
 
   animation: ${backgroundFakeHoverAnimation} 2s ease
     ${(props: { delay: string; marTop: boolean }) => props.delay};

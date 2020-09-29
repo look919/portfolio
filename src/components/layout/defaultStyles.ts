@@ -34,6 +34,15 @@ export const Page = styled.main`
   justify-items: center;
 
   animation: ${showUp} 1.5s ease-out 0.25s both;
+
+  @media ${device.laptopL} {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+
+    grid-template-rows: calc(100% - 2rem) 2rem;
+
+    height: calc(100vh - 10rem);
+  }
 `;
 
 export const H1 = styled.h1`

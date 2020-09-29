@@ -24,6 +24,9 @@ const WelcomePageWrapper = styled.section`
     top: ${({ moveTop }: { moveTop: boolean }) => (!moveTop ? '50%' : '35%')};
     left: 3.75rem;
   }
+  @media ${device.laptop} {
+    width: calc(100% - 20rem);
+  }
 `;
 
 const ButtonLink = styled(Link)`

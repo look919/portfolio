@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Page, Info, A } from '../layout/defaultStyles';
 import { FormattedMessage } from 'react-intl';
 //import { useMediaQuery } from 'react-responsive';
+import { device } from '../layout/defaultStyles';
 
 import { frontendData, backendData, toolsData } from './skillsData';
 import { SkillsContainer } from './SkillsContainer';
@@ -13,6 +14,10 @@ const Content = styled.div`
   grid-column-gap: 2rem;
   justify-content: space-between;
   width: 75%;
+
+  @media ${device.laptop} {
+    width: 90%;
+  }
 `;
 
 export const Skills = () => {
