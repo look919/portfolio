@@ -1,7 +1,8 @@
 {
   "WelcomePage.Description": "Cześć. Bardzo mi miło mi powitać cię na mojej stronie. Programowaniem stron internetowych bawię się od półtora roku i moim celem jest zostać MERN Stack Developerem, toteż codziennie dokładam cegiełkę aby nim zostać.",
   "WelcomePage.ExploreBtn": "Projekty",
-  "WelcomePage.ViewProfileBtn": "Profil",
+  "WelcomePage.ShowProfileBtn": "Profil",
+  "WelcomePage.HideProfileBtn": "Ukryj Profil",
   "Skills.Text": "Pełną listę technologii, z którymi pracuję możesz znaleźć pod tym ",
   "Skills.TextLink": "linkiem.",
   "Skills.Frontend": "Front-end",

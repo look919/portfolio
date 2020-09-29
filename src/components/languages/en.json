@@ -1,7 +1,8 @@
 {
   "WelcomePage.Description": "Hi. I am very pleased to welcome you on my website. I am into web programming for one and a half years and my goal is to become MERN Stack Developer, so I work hard everyday to become one.",
   "WelcomePage.ExploreBtn": "Explore work",
-  "WelcomePage.ViewProfileBtn": "View Profile",
+  "WelcomePage.ShowProfileBtn": "Show Profile",
+  "WelcomePage.HideProfileBtn": "Hide Profile",
   "Skills.Text": "Full list of technologies I work with you can find by clicking this ",
   "Skills.TextLink": "link.",
   "Skills.Frontend": "Front-end",

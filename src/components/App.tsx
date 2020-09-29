@@ -10,7 +10,6 @@ import { WelcomePage } from './welcomePage/WelcomePage';
 import { Skills } from './skills/Skills';
 import { Projects } from './projects/Projects';
 import { Contact } from './contact/Contact';
-import { Profile } from './profile/Profile';
 
 export const App = () => {
   return (
@@ -24,7 +23,6 @@ export const App = () => {
           <Route exact path='/skills' component={Skills} />
           <Route path='/projects' component={Projects} exact />
           <Route path='/contact' component={Contact} exact />
-          <Route path='/profile' component={Profile} exact />
           {/*
         <Route component={NotFoundPage} /> */}
         </Switch>
