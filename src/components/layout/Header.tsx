@@ -34,7 +34,8 @@ const SmallerMarginTop = styled.div`
 const _Header = ({ history }: RouteComponentProps) => {
   const [typistDone, setTypistDone] = useState(false);
 
-  if (history.location.pathname === '/') return null;
+  const headerDisplayableAt = ['/skills', '/projects', '/contact'];
+  if (!headerDisplayableAt.includes(history.location.pathname)) return null;
 
   const page =
     history.location.pathname[1].toUpperCase() +
