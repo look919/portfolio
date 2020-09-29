@@ -19,10 +19,10 @@ export const App = () => {
         <LanguageSelector />
         <Nav />
         <Switch>
-          <Route path='/' component={WelcomePage} exact={true} />
-          <Route path='/skills' component={Skills} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/contact' component={Contact} />
+          <Route exact path='/' component={WelcomePage} />
+          <Route exact path='/skills' component={Skills} />
+          <Route path='/projects' component={Projects} exact />
+          <Route path='/contact' component={Contact} exact />
           {/*
         <Route component={NotFoundPage} /> */}
         </Switch>
