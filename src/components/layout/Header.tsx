@@ -19,6 +19,9 @@ const HeaderContainer = styled.header`
     top: 1rem;
     left: 3.75rem;
   }
+  @media ${device.tablet} {
+    left: 2.5rem;
+  }
 `;
 export const TypedH1 = styled(Typist)`
   font-size: 4.8rem;

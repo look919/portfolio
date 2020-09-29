@@ -1,9 +1,15 @@
 import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { H1, H2, Info, ButtonContainer, Button } from '../layout/defaultStyles';
+import {
+  device,
+  H1,
+  H2,
+  ButtonContainer,
+  Button,
+  showUp,
+} from '../layout/defaultStyles';
 import { FormattedMessage } from 'react-intl';
-import { device } from '../layout/defaultStyles';
 
 import { Profile } from './Profile';
 
@@ -28,7 +34,14 @@ const WelcomePageWrapper = styled.section`
     width: calc(100% - 20rem);
   }
 `;
+const WelcomPageDescription = styled.p`
+  font-size: 1.5rem;
+  color: #ccc;
+  font-weight: 100;
+  margin-top: 1rem;
 
+  animation: ${showUp} 1s ease-out 1s both;
+`;
 const ButtonLink = styled(Link)`
   margin-right: 2rem;
 `;
@@ -45,14 +58,14 @@ export const WelcomePage = () => {
       <WelcomePageWrapper moveTop={isProfileOpen}>
         <H1>Tomasz Wirkus</H1>
         <H2>FullStack Developer</H2>
-        <Info>
+        <WelcomPageDescription>
           <FormattedMessage
             id='WelcomePage.Description'
             defaultMessage=' Hi. I am very pleased to welcome you on my website. I am into web
         programming for one and a half years and my goal is to become MERN Stack
         Developer, so I work hard everyday to become one.'
           />
-        </Info>
+        </WelcomPageDescription>
         <ButtonContainer>
           <ButtonLink to='/projects'>
             <Button>

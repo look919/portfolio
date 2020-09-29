@@ -18,6 +18,11 @@ const Content = styled.div`
   @media ${device.laptop} {
     width: 90%;
   }
+  @media ${device.tablet} {
+    width: 95%;
+    grid-column-gap: 1.5rem;
+    word-wrap: wrap;
+  }
 `;
 
 export const Skills = () => {

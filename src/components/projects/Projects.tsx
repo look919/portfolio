@@ -16,10 +16,7 @@ const CarouselContainer = styled.div`
   transition: all 0.3s;
 
   @media ${device.laptopL} {
-    width: 32rem;
-  }
-  @media ${device.laptop} {
-    width: 28rem;
+    width: 34rem;
   }
 `;
 

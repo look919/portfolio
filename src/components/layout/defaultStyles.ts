@@ -5,6 +5,7 @@ export const device = {
   laptopL: '(max-width: 90em)',
   laptop: '(max-width: 80em)',
   tablet: '(max-width: 64em)',
+  tabletS: '(max-width: 50em)',
   mobileL: '(max-width: 30em)',
   mobile: '(max-width: 25em)',
 };
@@ -73,11 +74,14 @@ export const Text = styled.span`
 
   animation: ${showUp} 1s ease-out 1s both;
 `;
+
 export const Info = styled.p`
   font-size: 1.5rem;
   color: #ccc;
   font-weight: 100;
   margin-top: 1rem;
+  width: 90%;
+  text-align: center;
 
   animation: ${showUp} 1s ease-out 1s both;
 `;
