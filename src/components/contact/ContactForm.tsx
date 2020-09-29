@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import validator from 'validator';
+import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 import {
@@ -18,7 +19,7 @@ const BottomContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const Status = styled.span`
+const Status = styled.p`
   font-size: 1.2rem;
   color: #ccc;
   font-weight: 100;
@@ -66,6 +67,7 @@ export const ContactForm = () => {
         ...formData,
         status: 'SUCCESS',
         email: '',
+        subject: '',
         message: '',
       });
 
@@ -130,42 +132,50 @@ export const ContactForm = () => {
         />
       </InputContainer>
       <InputContainer>
-        <Placeholder>Subject: </Placeholder>
+        <Placeholder>
+          <FormattedMessage id='Contact.Subject' defaultMessage='Subject:' />{' '}
+        </Placeholder>
         <Input value={formData.subject} name='subject' onChange={onChange} />
       </InputContainer>
       <TextArea name='message' value={formData.message} onChange={onChange} />
 
       <BottomContainer>
         {formData.status === 'ERROR' ? (
-          <Status>An Error, please make sure u provided valid email.</Status>
+          <Status>
+            <FormattedMessage
+              id='Contact.SubmitError'
+              defaultMessage=' An Error, please make sure u provided valid email.'
+            />
+          </Status>
         ) : formData.status === 'SHORT_MESSAGE' ? (
-          <Status>I asked you to leave me a message, not a test spam.</Status>
+          <Status>
+            <FormattedMessage
+              id='Contact.Spam'
+              defaultMessage='I asked you to leave me a message, not a test spam.'
+            />
+          </Status>
         ) : formData.status === 'NO_SUBJECT' ? (
-          <Status>Please provide a subject!</Status>
+          <Status>
+            <FormattedMessage
+              id='Contact.NoSubject'
+              defaultMessage='Please provide a subject.'
+            />
+          </Status>
         ) : formData.status === 'SUCCESS' ? (
-          <Status>Thanks!</Status>
+          <Status>
+            <FormattedMessage
+              id='Contact.SubmitSuccess'
+              defaultMessage='Thanks!'
+            />
+          </Status>
         ) : (
           <Status>&nbsp;</Status>
         )}
 
-        <Button disabled={buttonDisabled}>Submit</Button>
+        <Button disabled={buttonDisabled}>
+          <FormattedMessage id='Contact.Btn' defaultMessage='Submit' />
+        </Button>
       </BottomContainer>
     </Form>
   );
 };
-
-// INPUT WITH REACT_INTL
-//   {(msg) => (
-//     <input
-//       type='email'
-//       placeholder={msg}
-//       className={
-//         !isMobile && !isMobileLandscape
-//           ? 'contact-page__email contact-page__email--user'
-//           : 'contact-page__email contact-page__email--user contact-page__email--mobile'
-//       }
-//       value={formData.email}
-//       name='email'
-//       onChange={(e) => onChange(e)}
-//     />
-//   )}

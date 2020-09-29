@@ -48,6 +48,14 @@ export const Text = styled.span`
 
   animation: ${showUp} 1s ease-out 1s both;
 `;
+export const Info = styled.p`
+  font-size: 1.5rem;
+  color: #ccc;
+  font-weight: 100;
+  margin-top: 1rem;
+
+  animation: ${showUp} 1s ease-out 1s both;
+`;
 export const HighlitedText = styled.span`
   color: #fff;
   font-weight: 100;
@@ -105,6 +113,7 @@ export const Button = styled.button`
   }
   &:disabled {
     color: #343;
+    pointer-events: none;
   }
 `;
 export const Form = styled.form`

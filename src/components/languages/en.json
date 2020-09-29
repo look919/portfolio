@@ -1,8 +1,4 @@
 {
-  "Nav.Home": "Home",
-  "Nav.Skills": "Skills",
-  "Nav.Projects": "Projects",
-  "Nav.Contact": "Contact",
   "WelcomePage.Description": "Hi. I am very pleased to welcome you on my website. I am into web programming for one and a half years and my goal is to become MERN Stack Developer, so I work hard everyday to become one.",
   "WelcomePage.ExploreBtn": "Explore work",
   "WelcomePage.ViewProfileBtn": "View Profile",
@@ -13,7 +9,7 @@
   "Skills.Others": "TOOLS&OTHERS",
   "Projects.Text": "All the projects in the portfolio I created 100% by myself. ",
   "Projects.TextLink": "Take a look how i write my code.",
-  "Contact.Subject": "Subject",
+  "Contact.Subject": "Subject: ",
   "Contact.SubmitSuccess": "Thanks!",
   "Contact.SubmitError": "An Error, please make sure u provided valid email.",
   "Contact.Spam": "I asked you to leave me a message, not a test spam :)",

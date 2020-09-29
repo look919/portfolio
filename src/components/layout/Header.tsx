@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Typist from 'react-typist';
 
 import { Text, showUp } from '../layout/defaultStyles';
-import { FormattedMessage } from 'react-intl';
 
 const HeaderContainer = styled.header`
   position: absolute;

@@ -11,14 +11,14 @@ body{
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light','Helvetica Neue', 'Helvetica';
 
 
-    span {
+    p {
       
   font-family: ${({ lang }: { lang: string }) =>
     lang === 'en'
       ? "'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light','Helvetica Neue', 'Helvetica' "
       : "'Poppins', sans-serif"} !important;
         font-size: ${({ lang }: { lang: string }) =>
-          lang === 'en' ? '1.5rem' : '1.1rem'} !important; 
+          lang === 'en' ? '1.5rem' : '1.2rem'} !important; 
     }
 
 }

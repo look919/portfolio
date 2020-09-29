@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import { StarIcon } from '../../img/Svgs';
+import { FormattedMessage } from 'react-intl';
 
 const starFakeHoverAnimation = keyframes`
   0% {
@@ -146,7 +147,9 @@ export const SkillsContainer = ({
   <SkillsBox marTop={isInTheMiddle} delay={animationDelay}>
     <TitleContainer delay={animationDelay}>
       <StarIcon />
-      <h3>{title}</h3>
+      <h3>
+        <FormattedMessage id={title} defaultMessage='Skills' />
+      </h3>
     </TitleContainer>
     {data.map((el) => (
       <ElementContainer fillColor={el.fillColor} key={uuidv4()}>
