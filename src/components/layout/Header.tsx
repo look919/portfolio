@@ -37,27 +37,9 @@ const _Header = ({ history }: RouteComponentProps) => {
 
   if (history.location.pathname === '/') return null;
 
-  let lang = localStorage.getItem('lang') || 'en';
   const page =
     history.location.pathname[1].toUpperCase() +
     history.location.pathname.substring(2);
-  let heading = '';
-  if (lang === 'pl') {
-    switch (page) {
-      case 'Skills':
-        heading = 'Umiejętności';
-        break;
-      case 'Projects':
-        heading = 'Projekty';
-        break;
-      case 'Contact':
-        heading = 'Kontakt';
-        break;
-      default:
-        heading = '';
-        break;
-    }
-  }
 
   const cursor = {
     show: true,
@@ -69,7 +51,6 @@ const _Header = ({ history }: RouteComponentProps) => {
 
   history.listen(() => {
     setTypistDone(false);
-    lang = localStorage.getItem('lang') || 'en';
   });
 
   return (
@@ -80,12 +61,10 @@ const _Header = ({ history }: RouteComponentProps) => {
           cursor={cursor}
           onTypingDone={() => setTimeout(() => setTypistDone(true), 100)}
         >
-          {heading}
+          {page}
         </TypedH1>
       ) : (
-        <PageTitle>
-          <FormattedMessage id={`Nav.${page}`} defaultMessage={page} />
-        </PageTitle>
+        <PageTitle>{page}</PageTitle>
       )}
 
       <SmallerMarginTop>

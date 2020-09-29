@@ -16,11 +16,6 @@ body {
   width: 100vw;
   height: 100%;
   overflow: hidden;
-
-  /*
-  font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
-    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  font-family: 'Didact Gothic', sans-serif; */
 }
 
 canvas {
