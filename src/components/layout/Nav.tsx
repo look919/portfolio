@@ -8,7 +8,6 @@ import {
   SkillsIcon,
   ProjectsIcon,
   ContactIcon,
-  ProfileIcon,
 } from '../../img/Svgs';
 
 interface NavItemProps {
@@ -131,7 +130,7 @@ export const Nav = () => {
         <NavBurger id='icon' />
       </NavButton>
 
-      <NavIcons id='nav-icons' hght={isOpen ? '13.75rem' : '0'}>
+      <NavIcons id='nav-icons' hght={isOpen ? '11rem' : '0'}>
         <ScrollLink
           exact={true}
           to='/'
@@ -143,18 +142,10 @@ export const Nav = () => {
           <HomeIcon className='svg-nav' />
         </ScrollLink>
         <ScrollLink
-          to='/profile'
-          activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
-          hght={isOpen ? '2em' : '0'}
-          textofprevious='Home'
-        >
-          <ProfileIcon className='svg-nav' />
-        </ScrollLink>
-        <ScrollLink
           to='/skills'
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
           hght={isOpen ? '2em' : '0'}
-          textofprevious='Profile'
+          textofprevious='Home'
         >
           <SkillsIcon className='svg-nav' />
         </ScrollLink>
