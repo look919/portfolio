@@ -9,8 +9,8 @@ const EnLang = require('../../img/en.png');
 
 const ProfileContainer = styled.div`
   position: absolute;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 2rem;
+  right: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +37,7 @@ const SingleData = styled.div`
   }
 `;
 const SingleDataName = styled.span`
-  width: 10rem;
+  width: 9rem;
   font-size: 1.5rem;
   color: #ccc;
   font-weight: 100;
@@ -73,7 +73,7 @@ const Link = styled.a`
   }
 `;
 const ImageContainer = styled.div`
-  width: 15rem;
+  width: 13rem;
   height: 100%;
   animation: ${showUp} 1s ease-out 0.5s both;
 `;
@@ -87,35 +87,67 @@ export const Profile = () => {
     <ProfileContainer>
       <DataContainer>
         <SingleData>
-          <SingleDataName>Name:</SingleDataName>
+          <SingleDataName>
+            <FormattedMessage id='Profile.Name' defaultMessage='Name:' />
+          </SingleDataName>
           <Text>Tomasz</Text>
         </SingleData>
         <SingleData>
-          <SingleDataName>Surname:</SingleDataName>
+          <SingleDataName>
+            <FormattedMessage id='Profile.Surname' defaultMessage='Surname:' />
+          </SingleDataName>
           <Text>Wirkus</Text>
         </SingleData>
         <SingleData>
-          <SingleDataName>Place of live:</SingleDataName>
+          <SingleDataName>
+            <FormattedMessage
+              id='Profile.PlaceOfLive'
+              defaultMessage='Place of live:'
+            />
+          </SingleDataName>
           <Text>Koszalin</Text>
         </SingleData>
         <SingleData>
           <SingleDataName>Status:</SingleDataName>
-          <Text>Student of computer science</Text>
+          <Text>
+            <FormattedMessage
+              id='Profile.StatusAnswer'
+              defaultMessage='Student of computer science'
+            />
+          </Text>
         </SingleData>
         <SingleData>
           <SingleDataName>Email:</SingleDataName>
           <Text>wirkus919@gmail.com</Text>
         </SingleData>
         <SingleData>
-          <SingleDataName>Languages:</SingleDataName>
+          <SingleDataName>
+            <FormattedMessage
+              id='Profile.Languages'
+              defaultMessage='Languages:'
+            />
+          </SingleDataName>
           <SingleDataAnswerFlex>
-            <LangImg src={PlLang} alt='pl lang' /> <Text> - Native,</Text>{' '}
+            <LangImg src={PlLang} alt='pl lang' />{' '}
+            <Text>
+              <FormattedMessage
+                id='Profile.LanguagesAnswerOne'
+                defaultMessage='- Native,'
+              />
+            </Text>{' '}
             <LangImg src={EnLang} alt='en lang' />
-            <Text> - B2</Text>
+            <Text>
+              <FormattedMessage
+                id='Profile.LanguagesAnswerTwo'
+                defaultMessage=' - B2'
+              />
+            </Text>
           </SingleDataAnswerFlex>
         </SingleData>
         <SingleData>
-          <SingleDataName>Links:</SingleDataName>
+          <SingleDataName>
+            <FormattedMessage id='Profile.Links' defaultMessage='Links:' />
+          </SingleDataName>
           <SingleDataAnswerFlex>
             <Link
               href='https://github.com/look919'
