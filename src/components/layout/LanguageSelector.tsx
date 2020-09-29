@@ -2,23 +2,32 @@ import React, { useContext } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Select from 'react-select';
 import { Context } from '../languages/Wrapper';
+import { device } from './defaultStyles';
+
 const PlLang = require('../../img/pl.png');
 const EnLang = require('../../img/en.png');
 
 const GlobalStyle = createGlobalStyle`
 body{
-
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light','Helvetica Neue', 'Helvetica';
-
 
     p {
       
-  font-family: ${({ lang }: { lang: string }) =>
-    lang === 'en'
-      ? "'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light','Helvetica Neue', 'Helvetica' "
-      : "'Poppins', sans-serif"} !important;
+      font-family: ${({ lang }: { lang: string }) =>
+        lang === 'en'
+          ? "'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light','Helvetica Neue', 'Helvetica' "
+          : "'Poppins', sans-serif"} !important;
+      font-size: ${({ lang }: { lang: string }) =>
+        lang === 'en' ? '1.5rem' : '1.2rem'} !important; 
+
+        @media ${device.desktop} {
+          font-size: ${({ lang }: { lang: string }) =>
+            lang === 'en' ? '1.3rem' : '1rem'} !important; 
+        }
+      @media ${device.laptopL} {
         font-size: ${({ lang }: { lang: string }) =>
-          lang === 'en' ? '1.5rem' : '1.2rem'} !important; 
+          lang === 'en' ? '1.15rem' : '1rem'} !important; 
+      }
     }
 
 }

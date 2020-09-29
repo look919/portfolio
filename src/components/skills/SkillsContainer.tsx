@@ -112,19 +112,24 @@ const ElementContainer = styled.div`
 
 const SkillsBox = styled.div`
   width: 100%;
-  max-width: 40em;
-  height: 35em;
+  max-width: 27rem;
+
   background-color: rgb(54, 63, 78);
   display: flex;
   flex-direction: column;
   padding: 3.25rem 2rem;
-  padding-bottom: 0;
+  padding-bottom: 2rem;
   margin-top: ${(props: { delay: string; marTop: boolean }) =>
     props.marTop ? '-1.6rem' : '0'};
 
   animation: ${backgroundFakeHoverAnimation} 2s ease
     ${(props: { delay: string; marTop: boolean }) => props.delay};
   transition: all 0.5s;
+
+  @media ${device.laptopL} {
+    padding: 2rem 1.25rem;
+    padding-bottom: 1.25rem;
+  }
 
   &:hover {
     background-color: rgb(74, 83, 98);

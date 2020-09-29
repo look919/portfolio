@@ -2,8 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { GithubIcon, ProjectOnlineIcon } from '../../img/Svgs';
 import { Context } from '../languages/Wrapper';
-
-//import { Context } from '../Wrapper';
+import { device } from '../layout/defaultStyles';
 
 const Figure = styled.figure`
   display: grid;
@@ -97,10 +96,6 @@ const ProjectDetails = styled.div`
   padding-bottom: 0;
 
   transform: translateX(-50%);
-
-  @media only screen and (max-width: 31.25em) {
-    padding: 0.5rem;
-  }
 `;
 const ProjectDescription = styled.div`
   height: 100%;
@@ -116,6 +111,13 @@ const ProjectDescription = styled.div`
   color: #dfc4ea;
   border-bottom: 1px solid #ccc;
 
+  @media ${device.desktop} {
+    font-size: 1.3rem;
+  }
+  @media ${device.laptopL} {
+    font-size: 1rem;
+  }
+
   p {
     padding: 0 1rem;
   }
@@ -125,6 +127,13 @@ const ProjectDescriptionLink = styled.a`
   &:visited {
     font-size: 1.6rem;
     color: #fff;
+
+    @media ${device.desktop} {
+      font-size: 1.3rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -145,6 +154,11 @@ const ProjectTechnologiesImgsHover = styled.img`
   height: 6rem !important;
   width: 6rem !important;
   margin-bottom: ${(props: { marBottom: string }) => props.marBottom || '0'};
+
+  @media ${device.laptopL} {
+    height: 4rem !important;
+    width: 4rem !important;
+  }
 `;
 
 const ProjectInDevelopment = styled.div`
@@ -157,6 +171,10 @@ const ProjectInDevelopment = styled.div`
   padding: 5px 15px;
   font-size: 1.4rem;
   background: linear-gradient(265deg, rgb(26, 83, 255), rgb(26, 83, 255));
+
+  @media ${device.laptopL} {
+    padding: 3px 10px;
+  }
 `;
 const ProjectOverview = styled.div`
   position: relative;

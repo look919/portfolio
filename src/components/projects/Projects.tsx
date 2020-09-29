@@ -6,13 +6,18 @@ import { FormattedMessage } from 'react-intl';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { v4 as uuidv4 } from 'uuid';
+import { device } from '../layout/defaultStyles';
 
 import { SingleProject } from './SingleProject';
 import projects from './projects.json';
 
 const CarouselContainer = styled.div`
-  width: 37.5%;
+  width: 40rem;
   transition: all 0.3s;
+
+  @media ${device.laptopL} {
+    width: 32rem;
+  }
 `;
 
 export const Projects = () => {

@@ -42,12 +42,20 @@ export const H1 = styled.h1`
   margin-left: -7px;
 
   animation: ${showUp} 1s ease-in;
+
+  @media ${device.laptopL} {
+    font-size: 4.4rem;
+  }
 `;
 export const H2 = styled.h2`
   font-size: 3.2rem;
   font-weight: 100;
 
   animation: ${showUp} 1s ease-in;
+
+  @media ${device.laptopL} {
+    font-size: 3rem;
+  }
 `;
 export const Text = styled.span`
   font-size: 1.5rem;
@@ -82,6 +90,10 @@ export const ButtonContainer = styled.div`
   margin-top: 3rem;
 
   animation: ${showUp} 1s ease-out 1.5s both;
+
+  @media ${device.laptopL} {
+    margin-top: 1.5rem;
+  }
 `;
 export const Button = styled.button`
   position: relative;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import { showUp } from '../layout/defaultStyles';
 import { Github, LinkedIn, Resume } from '../../img/Svgs';
+import { device } from '../layout/defaultStyles';
 const Me = require('../../img/tw.png');
 const PlLang = require('../../img/pl.png');
 const EnLang = require('../../img/en.png');
@@ -14,19 +15,27 @@ const ProfileContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40rem;
+  width: 38rem;
   margin-top: -2rem;
 
   transition: all 0.3s;
   animation: ${showUp} 1s ease-out 0.25s both;
+
+  @media ${device.laptopL} {
+    width: 33rem;
+  }
 `;
 const DataContainer = styled.div`
-  width: calc(100% - 15rem);
+  width: calc(100% - 13rem);
   height: 100%;
 
   display: flex;
   flex-direction: column;
   align: items-center;
+
+  @media ${device.laptopL} {
+    width: calc(100% - 11rem);
+  }
 `;
 const SingleData = styled.div`
   display: flex;
@@ -36,13 +45,17 @@ const SingleData = styled.div`
     margin-bottom: 8px;
   }
 `;
-const SingleDataName = styled.span`
+const SingleDataName = styled.p`
   width: 9rem;
   font-size: 1.5rem;
   color: #ccc;
   font-weight: 100;
+
+  @media ${device.laptopL} {
+    width: 8rem;
+  }
 `;
-const Text = styled.span`
+const Text = styled.p`
   font-size: 1.5rem;
   color: #fff;
   font-weight: 100;
@@ -76,6 +89,10 @@ const ImageContainer = styled.div`
   width: 13rem;
   height: 100%;
   animation: ${showUp} 1s ease-out 0.5s both;
+
+  @media ${device.laptopL} {
+    width: 11rem;
+  }
 `;
 const Image = styled.img`
   width: 100%;

@@ -22,6 +22,7 @@ const WelcomePageWrapper = styled.section`
   @media ${device.desktop} {
     width: calc(100% - 40rem);
     top: ${({ moveTop }: { moveTop: boolean }) => (!moveTop ? '50%' : '35%')};
+    left: 3.75rem;
   }
 `;
 
