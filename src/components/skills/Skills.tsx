@@ -8,9 +8,11 @@ import { frontendData, backendData, toolsData } from './skillsData';
 import { SkillsContainer } from './SkillsContainer';
 
 const Content = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
   justify-content: space-between;
-  width: 70%;
+  width: 75%;
 `;
 
 export const Skills = () => {

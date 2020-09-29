@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { H1, H2, Info, ButtonContainer, Button } from '../layout/defaultStyles';
 import { FormattedMessage } from 'react-intl';
+import { device } from '../layout/defaultStyles';
 
 import { Profile } from './Profile';
 
@@ -17,6 +18,11 @@ const WelcomePageWrapper = styled.section`
   justify-content: space-evenly;
 
   transition: all 0.4s;
+
+  @media ${device.desktop} {
+    width: calc(100% - 40rem);
+    top: ${({ moveTop }: { moveTop: boolean }) => (!moveTop ? '50%' : '35%')};
+  }
 `;
 
 const ButtonLink = styled(Link)`

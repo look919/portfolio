@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import { StarIcon } from '../../img/Svgs';
 import { FormattedMessage } from 'react-intl';
+import { device } from '../layout/defaultStyles';
 
 const starFakeHoverAnimation = keyframes`
   0% {
@@ -55,6 +56,11 @@ const TitleContainer = styled.div`
 
     animation: ${starFakeHoverAnimation} 2s ease
       ${(props: { delay: string }) => props.delay};
+
+    @media ${device.desktop} {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
   }
   h3 {
     font-size: 2rem;
@@ -64,6 +70,10 @@ const TitleContainer = styled.div`
 
     animation: ${titleFakeHoverAnimation} 2s ease
       ${(props: { delay: string }) => props.delay};
+
+    @media ${device.desktop} {
+      font-size: 1.4rem;
+    }
   }
 `;
 const ElementContainer = styled.div`
@@ -83,11 +93,20 @@ const ElementContainer = styled.div`
     margin-right: 2.5em;
 
     transition: all 1s;
+
+    @media ${device.desktop} {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
   }
   span {
     color: #ccc;
     font-size: 1.6rem;
     letter-spacing: 1px;
+
+    @media ${device.desktop} {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -98,7 +117,7 @@ const SkillsBox = styled.div`
   background-color: rgb(54, 63, 78);
   display: flex;
   flex-direction: column;
-  padding: 3.25rem 2.5rem;
+  padding: 3.25rem 2rem;
   padding-bottom: 0;
   margin-top: ${(props: { delay: string; marTop: boolean }) =>
     props.marTop ? '-1.6rem' : '0'};
@@ -123,11 +142,20 @@ const SkillsBox = styled.div`
       fill: #aaa !important;
       height: 1.6rem;
       width: 1.6rem;
+
+      @media ${device.desktop} {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
     }
     span {
       font-size: 1.6rem;
       color: #aaa;
       letter-spacing: 1px;
+
+      @media ${device.desktop} {
+        font-size: 1.2rem;
+      }
     }
   }
 `;
