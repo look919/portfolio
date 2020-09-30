@@ -9,6 +9,7 @@ export const device = {
   mobileLandscape: '(max-width: 40em)',
   mobileL: '(max-width: 30em)',
   mobile: '(max-width: 25em)',
+  mobileS: '(max-width: 21.25em)',
 };
 
 export const showUp = keyframes`
@@ -41,12 +42,9 @@ export const Page = styled.main`
     margin-top: 8rem;
     margin-bottom: 2rem;
 
-    grid-template-rows: calc(100% - 2rem) 2rem;
-
     height: calc(100vh - 10rem);
   }
   @media ${device.mobileL} {
-    grid-template-rows: calc(100% - 6rem) 6rem;
     margin-top: 6rem;
     height: calc(100vh - 8rem);
   }
@@ -66,6 +64,12 @@ export const H1 = styled.h1`
     font-size: 3rem;
     margin-left: -4px;
   }
+  @media ${device.mobile} {
+    font-size: 2.6rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 2.2rem;
+  }
 `;
 export const H2 = styled.h2`
   font-size: 3.2rem;
@@ -78,6 +82,12 @@ export const H2 = styled.h2`
   }
   @media ${device.mobileLandscape} {
     font-size: 2.2rem;
+  }
+  @media ${device.mobile} {
+    font-size: 1.9rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 1.6rem;
   }
 `;
 export const Text = styled.span`
@@ -101,6 +111,10 @@ export const Info = styled.p`
   text-align: center;
 
   animation: ${showUp} 1s ease-out 1s both;
+
+  @media ${device.mobile} {
+    width: 95%;
+  }
 `;
 export const HighlitedText = styled.span`
   color: #fff;
@@ -124,6 +138,9 @@ export const ButtonContainer = styled.div`
   @media ${device.laptopL} {
     margin-top: 1.5rem;
   }
+  @media ${device.mobile} {
+    margin-top: 1rem;
+  }
 `;
 export const Button = styled.button`
   position: relative;
@@ -142,6 +159,10 @@ export const Button = styled.button`
   @media ${device.mobileLandscape} {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
+  }
+  @media ${device.mobile} {
+    font-size: 0.6rem;
+    padding: 0.5rem 0.8rem;
   }
 
   &::after {
@@ -193,6 +214,10 @@ export const InputContainer = styled.div`
 `;
 export const Placeholder = styled.span`
   margin-right: 7px;
+
+  @media ${device.mobileLandscape} {
+    font-size: 1rem;
+  }
 `;
 export const Input = styled.input`
   height: 100%;
@@ -201,6 +226,10 @@ export const Input = styled.input`
   background-color: transparent;
   font-size: 1.2rem;
   color: white;
+
+  @media ${device.mobileLandscape} {
+    font-size: 1rem;
+  }
 
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
     'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
@@ -220,6 +249,10 @@ export const TextArea = styled.textarea`
   font-size: 1.1rem;
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light',
     'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+  @media ${device.mobileLandscape} {
+    font-size: 0.9rem;
+  }
 
   &:focus {
     outline: none;

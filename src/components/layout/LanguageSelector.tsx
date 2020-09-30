@@ -11,9 +11,7 @@ const EnLang = require('../../img/en.png');
 const GlobalStyle = createGlobalStyle`
 body{
   font-family: 'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light','Helvetica Neue', 'Helvetica';
-
-    p {
-      
+    p { 
       font-family: ${({ lang }: { lang: string }) =>
         lang === 'en'
           ? "'futura-pt', 'HelveticaNeue-Light', 'Helvetica Neue Light','Helvetica Neue', 'Helvetica' "
@@ -21,16 +19,22 @@ body{
       font-size: ${({ lang }: { lang: string }) =>
         lang === 'en' ? '1.5rem' : '1.2rem'} !important; 
 
-        @media ${device.desktop} {
-          font-size: ${({ lang }: { lang: string }) =>
-            lang === 'en' ? '1.3rem' : '1rem'} !important; 
-        }
+      @media ${device.desktop} {
+        font-size: ${({ lang }: { lang: string }) =>
+          lang === 'en' ? '1.3rem' : '1rem'} !important; 
+      }
       @media ${device.laptopL} {
         font-size: ${({ lang }: { lang: string }) =>
           lang === 'en' ? '1.15rem' : '1rem'} !important; 
       }
+      @media ${device.mobile} {
+        font-size: ${({ lang }: { lang: string }) =>
+          lang === 'en' ? '0.9rem' : '0.8rem'} !important; 
+      }
+      @media ${device.mobileS} {
+        font-size: ${({ lang }: { lang: string }) =>
+          lang === 'en' ? '0.8rem' : '0.65rem'} !important; 
     }
-
 }
 `;
 

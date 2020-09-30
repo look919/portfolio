@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { device, showUp } from './defaultStyles';
-
+import { useMediaQuery } from 'react-responsive';
 import {
   HomeIcon,
   SkillsIcon,
@@ -25,13 +25,13 @@ const NavWrapper = styled.nav`
   display: flex;
   flex-direction: column;
 
-  &:hover {
-    background-color: rgb(9, 5, 24);
-  }
-
   @media ${device.mobileLandscape} {
     height: 5rem;
     width: 5rem;
+  }
+
+  &:hover {
+    background-color: rgb(9, 5, 24);
   }
 `;
 const NavButton = styled.button`
@@ -46,6 +46,10 @@ const NavButton = styled.button`
   background-color: transparent;
   transition: all 0.2s;
 
+  @media ${device.mobileLandscape} {
+    height: 5rem;
+  }
+
   &:focus {
     outline: none;
   }
@@ -53,10 +57,6 @@ const NavButton = styled.button`
   &:hover > #icon::before,
   &:hover > #icon::after {
     left: 35%;
-  }
-
-  @media ${device.mobileLandscape} {
-    height: 5rem;
   }
 `;
 const NavBurger = styled.div`
@@ -109,6 +109,10 @@ const ScrollLink = styled(NavLink)`
   cursor: pointer;
   transition: all 0.5s;
 
+  @media ${device.mobileS} {
+    width: 1.2rem;
+  }
+
   &::before {
     position: absolute;
     right: 7rem;
@@ -138,6 +142,7 @@ const ScrollLink = styled(NavLink)`
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isMobileS = useMediaQuery({ query: '(max-width: 21.25em)' });
 
   const handleNavDisplay = () => {
     isOpen ? setIsOpen(false) : setIsOpen(true);
@@ -149,13 +154,16 @@ export const Nav = () => {
         <NavBurger id='icon' />
       </NavButton>
 
-      <NavIcons id='nav-icons' hght={isOpen ? '11rem' : '0'}>
+      <NavIcons
+        id='nav-icons'
+        hght={isOpen ? (!isMobileS ? '11rem' : '9.5rem') : '0'}
+      >
         <ScrollLink
           exact={true}
           to='/'
           style={{ margin: 0, marginBottom: 0 }}
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
-          hght={isOpen ? '2em' : '0'}
+          hght={isOpen ? (!isMobileS ? '1.2rem' : '0.9rem') : '0'}
           textofprevious=''
         >
           <HomeIcon className='svg-nav' />
@@ -163,7 +171,7 @@ export const Nav = () => {
         <ScrollLink
           to='/skills'
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
-          hght={isOpen ? '2em' : '0'}
+          hght={isOpen ? (!isMobileS ? '1.2rem' : '0.9rem') : '0'}
           textofprevious='Home'
         >
           <SkillsIcon className='svg-nav' />
@@ -171,7 +179,7 @@ export const Nav = () => {
         <ScrollLink
           to='/projects'
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
-          hght={isOpen ? '2em' : '0'}
+          hght={isOpen ? (!isMobileS ? '1.2rem' : '0.9rem') : '0'}
           textofprevious='Skills'
         >
           <ProjectsIcon className='svg-nav' />
@@ -179,7 +187,7 @@ export const Nav = () => {
         <ScrollLink
           to='/contact'
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
-          hght={isOpen ? '2em' : '0'}
+          hght={isOpen ? (!isMobileS ? '1.2rem' : '0.9rem') : '0'}
           textofprevious='Projects'
         >
           <ContactIcon className='svg-nav' />

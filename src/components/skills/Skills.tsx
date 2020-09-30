@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Page, Info, A } from '../layout/defaultStyles';
 import { FormattedMessage } from 'react-intl';
-//import { useMediaQuery } from 'react-responsive';
 import { device } from '../layout/defaultStyles';
 
 import { frontendData, backendData, toolsData } from './skillsData';
@@ -28,6 +27,9 @@ const Content = styled.div`
     grid-template-rows: repeat(3, min-content);
     justify-items: center;
     grid-row-gap: 1rem;
+  }
+  @media ${device.mobile} {
+    grid-row-gap: 0.5rem;
   }
 `;
 

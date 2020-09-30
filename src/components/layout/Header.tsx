@@ -24,7 +24,7 @@ const HeaderContainer = styled.header`
   }
   @media ${device.mobileL} {
     left: 1.5rem;
-    top: 0.5rem;
+    top: 1rem;
   }
 `;
 export const TypedH1 = styled(Typist)`
@@ -42,6 +42,12 @@ export const TypedH1 = styled(Typist)`
   @media ${device.mobileL} {
     margin-left: 0;
   }
+  @media ${device.mobile} {
+    font-size: 3.2rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 2.6rem;
+  }
 `;
 const PageTitle = styled.h1`
   font-size: 4.8rem;
@@ -57,6 +63,12 @@ const PageTitle = styled.h1`
   }
   @media ${device.mobileL} {
     margin-left: 0;
+  }
+  @media ${device.mobile} {
+    font-size: 3.2rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 2.6rem;
   }
 `;
 const SmallerMarginTop = styled.div`

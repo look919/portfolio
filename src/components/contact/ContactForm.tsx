@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import validator from 'validator';
 import { FormattedMessage } from 'react-intl';
-
 import styled from 'styled-components';
 import {
   Form,

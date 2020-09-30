@@ -18,11 +18,22 @@ const ProjectInfo = styled.div`
   border-bottom: 1px solid #ccc;
   padding: 0 0.5rem;
   margin-bottom: 1rem;
+
+  @media ${device.mobileL} {
+    margin-bottom: 5px;
+  }
 `;
 const ProjectName = styled.h3`
   font-size: 2rem;
   text-align: left;
   flex: 1 0 0;
+
+  @media ${device.mobileL} {
+    font-size: 1.6rem;
+  }
+  @media ${device.mobile} {
+    font-size: 1.2rem;
+  }
 `;
 
 const ProjectGithub = styled.a`
@@ -42,6 +53,11 @@ const ProjectGithub = styled.a`
     transition: all 0.4s;
     margin-right: 0.7rem;
     margin-bottom: -5px;
+
+    @media ${device.mobile} {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
   }
 
   &:hover {
@@ -168,6 +184,9 @@ const ProjectTechnologies = styled.div`
     padding: 0.5rem 0;
     height: 4rem;
   }
+  @media ${device.mobileS} {
+    height: 3rem;
+  }
 `;
 const ProjectTechnologiesImgsHover = styled.img`
   object-fit: cover;
@@ -182,6 +201,10 @@ const ProjectTechnologiesImgsHover = styled.img`
   @media ${device.mobileL} {
     width: 3rem !important;
     height: 3rem !important;
+  }
+  @media ${device.mobileS} {
+    height: 2rem !important;
+    width: 2rem !important;
   }
 `;
 
@@ -274,7 +297,9 @@ export const SingleProject = ({ project }: { project: any }) => {
             {project.imgHover.map((el: string) => {
               return (
                 <ProjectTechnologiesImgsHover
-                  marBottom={el !== 'node.png' ? '0' : '0.7rem'}
+                  marBottom={
+                    el !== 'node.png' ? '0' : !isMobile ? '0.7rem' : '0.4rem'
+                  }
                   src={require(`../../img/techs/${el}`)}
                   key={el}
                   alt='project technologies'

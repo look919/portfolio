@@ -53,6 +53,9 @@ const TitleContainer = styled.div`
   @media ${device.mobileLandscape} {
     margin-bottom: 5px;
   }
+  @media ${device.mobile} {
+    margin-top: 0;
+  }
 
   svg {
     fill: #aaa;
@@ -78,6 +81,12 @@ const TitleContainer = styled.div`
       height: 1rem;
       width: 1rem;
       margin-right: 0.6rem;
+      margin-left: 1px;
+    }
+    @media ${device.mobileS} {
+      height: 0.75rem;
+      width: 0.75rem;
+      margin-left: 3px;
     }
   }
   h3 {
@@ -97,6 +106,9 @@ const TitleContainer = styled.div`
     }
     @media ${device.tablet} {
       font-size: 1rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 0.75rem;
     }
   }
 `;
@@ -187,6 +199,9 @@ const SkillsBox = styled.div`
     margin: 0;
     padding: 0 1.25rem;
     padding-bottom: 0.5rem;
+  }
+  @media ${device.mobile} {
+    padding: 0.5rem 1.25rem;
   }
 
   &:hover {

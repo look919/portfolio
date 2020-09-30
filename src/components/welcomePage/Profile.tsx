@@ -50,15 +50,10 @@ const SingleData = styled.div`
   }
 `;
 const SingleDataName = styled.p`
-  //width: 9rem;
   font-size: 1.5rem;
   color: #ccc;
   font-weight: 100;
   margin-right: 0.5rem;
-
-  @media ${device.laptopL} {
-    //width: 8rem;
-  }
 `;
 const Text = styled.p`
   font-size: 1.5rem;
@@ -70,9 +65,14 @@ const SingleDataAnswerFlex = styled.div`
   align-items: center;
 `;
 const LangImg = styled.img`
-  height: 1.2rem;
+  height: 1rem;
   width: 1.2rem;
   margin: 0 3px;
+
+  @media ${device.mobileS} {
+    height: 0.8rem;
+    width: 1rem;
+  }
 
   &:last-of-type {
     margin-left: 10px;
@@ -83,6 +83,12 @@ const Link = styled.a`
 
   svg {
     margin-right: 1rem;
+
+    @media ${device.mobileS} {
+      height: 1.25rem;
+      width: 1.25rem;
+      margin-right: 0.5rem;
+    }
 
     &:first-of-type {
       margin-left: 3px !important;
@@ -100,6 +106,9 @@ const ImageContainer = styled.div`
   }
   @media ${device.mobileLandscape} {
     width: 8rem;
+  }
+  @media ${device.mobile} {
+    width: 6rem;
   }
 `;
 const Image = styled.img`

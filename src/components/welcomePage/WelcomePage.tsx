@@ -54,6 +54,10 @@ const WelcomPageDescription = styled.p`
   margin-top: 1rem;
 
   animation: ${showUp} 1s ease-out 1s both;
+
+  @media ${device.mobile} {
+    margin-top: 0.5rem;
+  }
 `;
 const ButtonLink = styled(Link)`
   margin-right: 2rem;
