@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import { showUp } from '../layout/defaultStyles';
 import { Github, LinkedIn, Resume } from '../../img/Svgs';
+import { device } from '../layout/defaultStyles';
 const Me = require('../../img/tw.png');
 const PlLang = require('../../img/pl.png');
 const EnLang = require('../../img/en.png');
@@ -14,14 +15,22 @@ const ProfileContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40rem;
   margin-top: -2rem;
 
   transition: all 0.3s;
   animation: ${showUp} 1s ease-out 0.25s both;
+
+  @media ${device.mobileLandscape} {
+    right: 0.5rem;
+    bottom: 1rem;
+  }
+  @media ${device.mobileL} {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 const DataContainer = styled.div`
-  width: calc(100% - 15rem);
   height: 100%;
 
   display: flex;
@@ -34,15 +43,19 @@ const SingleData = styled.div`
 
   &:not(:last-of-type) {
     margin-bottom: 8px;
+
+    @media ${device.mobileLandscape} {
+      margin-bottom: 4px;
+    }
   }
 `;
-const SingleDataName = styled.span`
-  width: 9rem;
+const SingleDataName = styled.p`
   font-size: 1.5rem;
   color: #ccc;
   font-weight: 100;
+  margin-right: 0.5rem;
 `;
-const Text = styled.span`
+const Text = styled.p`
   font-size: 1.5rem;
   color: #fff;
   font-weight: 100;
@@ -52,9 +65,14 @@ const SingleDataAnswerFlex = styled.div`
   align-items: center;
 `;
 const LangImg = styled.img`
-  height: 1.2rem;
+  height: 1rem;
   width: 1.2rem;
   margin: 0 3px;
+
+  @media ${device.mobileS} {
+    height: 0.8rem;
+    width: 1rem;
+  }
 
   &:last-of-type {
     margin-left: 10px;
@@ -66,6 +84,12 @@ const Link = styled.a`
   svg {
     margin-right: 1rem;
 
+    @media ${device.mobileS} {
+      height: 1.25rem;
+      width: 1.25rem;
+      margin-right: 0.5rem;
+    }
+
     &:first-of-type {
       margin-left: 3px !important;
       margin-right: calc(1rem - 5px);
@@ -76,6 +100,16 @@ const ImageContainer = styled.div`
   width: 13rem;
   height: 100%;
   animation: ${showUp} 1s ease-out 0.5s both;
+
+  @media ${device.laptopL} {
+    width: 11rem;
+  }
+  @media ${device.mobileLandscape} {
+    width: 8rem;
+  }
+  @media ${device.mobile} {
+    width: 6rem;
+  }
 `;
 const Image = styled.img`
   width: 100%;
@@ -164,7 +198,7 @@ export const Profile = () => {
               <LinkedIn />
             </Link>
             <Link
-              href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view'
+              href='https://drive.google.com/file/d/1Ab6ZAv_uclA9PvL3VnfTJlGVs20KJWMh/view?usp=sharing'
               target='_blank'
               rel='noopener noreferrer'
             >

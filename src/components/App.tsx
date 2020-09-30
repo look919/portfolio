@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Div100vh from 'react-div-100vh';
 import './app.css';
 
 import { Header } from './layout/Header';
@@ -14,7 +15,7 @@ import { Contact } from './contact/Contact';
 export const App = () => {
   return (
     <BrowserRouter>
-      <Fragment>
+      <Div100vh>
         <Header />
         <LanguageSelector />
         <Nav />
@@ -25,7 +26,7 @@ export const App = () => {
           <Route path='/contact' component={Contact} exact />
           <Route component={WelcomePage} />
         </Switch>
-      </Fragment>
+      </Div100vh>
     </BrowserRouter>
   );
 };

@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { GithubIcon, ProjectOnlineIcon } from '../../img/Svgs';
 import { Context } from '../languages/Wrapper';
-
-//import { Context } from '../Wrapper';
+import { device } from '../layout/defaultStyles';
+import { useMediaQuery } from 'react-responsive';
 
 const Figure = styled.figure`
   display: grid;
@@ -18,11 +18,22 @@ const ProjectInfo = styled.div`
   border-bottom: 1px solid #ccc;
   padding: 0 0.5rem;
   margin-bottom: 1rem;
+
+  @media ${device.mobileL} {
+    margin-bottom: 5px;
+  }
 `;
 const ProjectName = styled.h3`
   font-size: 2rem;
   text-align: left;
   flex: 1 0 0;
+
+  @media ${device.mobileL} {
+    font-size: 1.6rem;
+  }
+  @media ${device.mobile} {
+    font-size: 1.2rem;
+  }
 `;
 
 const ProjectGithub = styled.a`
@@ -42,6 +53,11 @@ const ProjectGithub = styled.a`
     transition: all 0.4s;
     margin-right: 0.7rem;
     margin-bottom: -5px;
+
+    @media ${device.mobile} {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
   }
 
   &:hover {
@@ -96,11 +112,12 @@ const ProjectDetails = styled.div`
   padding: 0.75rem;
   padding-bottom: 0;
 
-  transform: translateX(-50%);
-
-  @media only screen and (max-width: 31.25em) {
-    padding: 0.5rem;
+  @media ${device.mobileL} {
+    padding: 0;
+    paddint-top: 1rem;
   }
+
+  transform: translateX(-50%);
 `;
 const ProjectDescription = styled.div`
   height: 100%;
@@ -116,8 +133,21 @@ const ProjectDescription = styled.div`
   color: #dfc4ea;
   border-bottom: 1px solid #ccc;
 
+  @media ${device.desktop} {
+    font-size: 1.3rem;
+  }
+  @media ${device.laptopL} {
+    font-size: 1rem;
+  }
+  @media ${device.mobileL} {
+    padding: 0.75rem 0;
+  }
   p {
     padding: 0 1rem;
+
+    @media ${device.mobileL} {
+      padding: 0 0.5rem;
+    }
   }
 `;
 const ProjectDescriptionLink = styled.a`
@@ -125,6 +155,13 @@ const ProjectDescriptionLink = styled.a`
   &:visited {
     font-size: 1.6rem;
     color: #fff;
+
+    @media ${device.desktop} {
+      font-size: 1.3rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -139,12 +176,36 @@ const ProjectTechnologies = styled.div`
   align-items: center;
   justify-content: space-between;
   transition: all 0.1s;
+
+  @media ${device.laptopL} {
+    height: 6rem;
+  }
+  @media ${device.mobileL} {
+    padding: 0.5rem 0;
+    height: 4rem;
+  }
+  @media ${device.mobileS} {
+    height: 3rem;
+  }
 `;
 const ProjectTechnologiesImgsHover = styled.img`
   object-fit: cover;
   height: 6rem !important;
   width: 6rem !important;
   margin-bottom: ${(props: { marBottom: string }) => props.marBottom || '0'};
+
+  @media ${device.laptopL} {
+    height: 4rem !important;
+    width: 4rem !important;
+  }
+  @media ${device.mobileL} {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  @media ${device.mobileS} {
+    height: 2rem !important;
+    width: 2rem !important;
+  }
 `;
 
 const ProjectInDevelopment = styled.div`
@@ -157,6 +218,13 @@ const ProjectInDevelopment = styled.div`
   padding: 5px 15px;
   font-size: 1.4rem;
   background: linear-gradient(265deg, rgb(26, 83, 255), rgb(26, 83, 255));
+
+  @media ${device.laptopL} {
+    padding: 3px 10px;
+  }
+  @media ${device.mobileLandscape} {
+    font-size: 1rem;
+  }
 `;
 const ProjectOverview = styled.div`
   position: relative;
@@ -171,6 +239,7 @@ const ProjectOverview = styled.div`
 
 export const SingleProject = ({ project }: { project: any }) => {
   const context = useContext(Context);
+  const isMobile = useMediaQuery({ query: '(max-width: 30em)' });
 
   if (!context) return null;
   const lang = context.getLang();
@@ -204,7 +273,7 @@ export const SingleProject = ({ project }: { project: any }) => {
 
               {lang === 'en' && project.title === 'ResumeGenerator' && (
                 <ProjectDescriptionLink
-                  href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1Ab6ZAv_uclA9PvL3VnfTJlGVs20KJWMh/view?usp=sharing'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -213,7 +282,7 @@ export const SingleProject = ({ project }: { project: any }) => {
               )}
               {lang === 'pl' && project.title === 'ResumeGenerator' && (
                 <ProjectDescriptionLink
-                  href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1Ab6ZAv_uclA9PvL3VnfTJlGVs20KJWMh/view?usp=sharing'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -228,7 +297,9 @@ export const SingleProject = ({ project }: { project: any }) => {
             {project.imgHover.map((el: string) => {
               return (
                 <ProjectTechnologiesImgsHover
-                  marBottom={el !== 'node.png' ? '0' : '0.7rem'}
+                  marBottom={
+                    el !== 'node.png' ? '0' : !isMobile ? '0.7rem' : '0.4rem'
+                  }
                   src={require(`../../img/techs/${el}`)}
                   key={el}
                   alt='project technologies'
@@ -236,7 +307,7 @@ export const SingleProject = ({ project }: { project: any }) => {
               );
             })}
           </ProjectTechnologies>
-          {project.development && (
+          {project.development && !isMobile && (
             <ProjectInDevelopment>In development</ProjectInDevelopment>
           )}
         </ProjectDetails>
