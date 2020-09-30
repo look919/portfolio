@@ -28,7 +28,7 @@ export const Page = styled.main`
   margin-top: 10rem;
   margin-bottom: 4rem;
 
-  height: calc(100vh - 14rem);
+  height: calc(100% - 14rem);
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: calc(100% - 3rem) 3rem;
@@ -42,11 +42,11 @@ export const Page = styled.main`
     margin-top: 8rem;
     margin-bottom: 2rem;
 
-    height: calc(100vh - 10rem);
+    height: calc(100% - 10rem);
   }
   @media ${device.mobileL} {
     margin-top: 6rem;
-    height: calc(100vh - 8rem);
+    height: calc(100% - 8rem);
   }
 `;
 

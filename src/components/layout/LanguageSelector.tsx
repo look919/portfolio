@@ -40,7 +40,7 @@ body{
 
 const SelectorContainer = styled.div`
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
   right: 8.5rem;
   z-index: 100;
 
@@ -56,7 +56,7 @@ const SelectorContainer = styled.div`
   justif-content: space-between;
 
   @media ${device.mobileLandscape} {
-    top: 0.75rem;
+    top: 1.25rem;
     right: 5.5rem;
   }
   @media ${device.mobileL} {

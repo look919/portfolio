@@ -123,6 +123,9 @@ const ElementContainer = styled.div`
     @media ${device.mobileLandscape} {
       margin-bottom: 3px;
     }
+    @media ${device.mobileS} {
+      margin-bottom: 2px;
+    }
   }
 
   svg {
@@ -151,6 +154,11 @@ const ElementContainer = styled.div`
       width: 0.8rem;
       margin-right: 0.7rem;
     }
+    @media ${device.mobileS} {
+      height: 0.8rem;
+      width: 0.8rem;
+      margin-right: 0.8rem;
+    }
   }
   span {
     color: #ccc;
@@ -165,6 +173,9 @@ const ElementContainer = styled.div`
     }
     @media ${device.tabletS} {
       font-size: 0.8rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 0.7rem;
     }
   }
 `;
@@ -203,6 +214,9 @@ const SkillsBox = styled.div`
   @media ${device.mobile} {
     padding: 0.5rem 1.25rem;
   }
+  @media ${device.mobileS} {
+    padding: 0.4rem 1.25rem;
+  }
 
   &:hover {
     background-color: rgb(74, 83, 98);
@@ -233,6 +247,10 @@ const SkillsBox = styled.div`
         height: 0.8rem;
         width: 0.8rem;
       }
+      @media ${device.mobileS} {
+        height: 0.7rem;
+        width: 0.7rem;
+      }
     }
     span {
       font-size: 1.6rem;
@@ -247,6 +265,9 @@ const SkillsBox = styled.div`
       }
       @media ${device.tabletS} {
         font-size: 0.8rem;
+      }
+      @media ${device.mobileS} {
+        font-size: 0.7rem;
       }
     }
   }
