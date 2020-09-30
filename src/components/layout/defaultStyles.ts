@@ -45,6 +45,11 @@ export const Page = styled.main`
 
     height: calc(100vh - 10rem);
   }
+  @media ${device.mobileL} {
+    grid-template-rows: calc(100% - 6rem) 6rem;
+    margin-top: 6rem;
+    height: calc(100vh - 8rem);
+  }
 `;
 
 export const H1 = styled.h1`
@@ -81,6 +86,10 @@ export const Text = styled.span`
   font-weight: 100;
 
   animation: ${showUp} 1s ease-out 1s both;
+
+  @media ${device.mobileLandscape} {
+    font-size: 1.2rem;
+  }
 `;
 
 export const Info = styled.p`

@@ -3,7 +3,7 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import Typist from 'react-typist';
 import { device } from './defaultStyles';
-
+import { useMediaQuery } from 'react-responsive';
 import { Text, showUp } from '../layout/defaultStyles';
 
 const HeaderContainer = styled.header`
@@ -22,6 +22,10 @@ const HeaderContainer = styled.header`
   @media ${device.tablet} {
     left: 2.5rem;
   }
+  @media ${device.mobileL} {
+    left: 1.5rem;
+    top: 0.5rem;
+  }
 `;
 export const TypedH1 = styled(Typist)`
   font-size: 4.8rem;
@@ -31,6 +35,13 @@ export const TypedH1 = styled(Typist)`
   @media ${device.laptopL} {
     font-size: 4.4rem;
   }
+  @media ${device.mobileLandscape} {
+    font-size: 3.6rem;
+    margin-left: -6px;
+  }
+  @media ${device.mobileL} {
+    margin-left: 0;
+  }
 `;
 const PageTitle = styled.h1`
   font-size: 4.8rem;
@@ -39,6 +50,13 @@ const PageTitle = styled.h1`
 
   @media ${device.laptopL} {
     font-size: 4.4rem;
+  }
+  @media ${device.mobileLandscape} {
+    font-size: 3.6rem;
+    margin-left: -6px;
+  }
+  @media ${device.mobileL} {
+    margin-left: 0;
   }
 `;
 const SmallerMarginTop = styled.div`
@@ -54,6 +72,7 @@ const SmallerMarginTop = styled.div`
 
 const _Header = ({ history }: RouteComponentProps) => {
   const [typistDone, setTypistDone] = useState(false);
+  const isMobile = useMediaQuery({ query: '(max-width: 30em)' });
 
   const headerDisplayableAt = ['/skills', '/projects', '/contact'];
   if (!headerDisplayableAt.includes(history.location.pathname)) return null;
@@ -87,10 +106,11 @@ const _Header = ({ history }: RouteComponentProps) => {
       ) : (
         <PageTitle>{page}</PageTitle>
       )}
-
-      <SmallerMarginTop>
-        <Text>Tomasz Wirkus - portfolio</Text>
-      </SmallerMarginTop>
+      {!isMobile && (
+        <SmallerMarginTop>
+          <Text>Tomasz Wirkus - portfolio</Text>
+        </SmallerMarginTop>
+      )}
     </HeaderContainer>
   );
 };

@@ -32,8 +32,6 @@ const Content = styled.div`
 `;
 
 export const Skills = () => {
-  //const isIPadOrSmaller = useMediaQuery({ query: '(max-width: 1024px)' });
-
   return (
     <Page>
       <Content>

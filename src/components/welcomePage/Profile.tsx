@@ -22,6 +22,12 @@ const ProfileContainer = styled.div`
 
   @media ${device.mobileLandscape} {
     right: 0.5rem;
+    bottom: 1rem;
+  }
+  @media ${device.mobileL} {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `;
 const DataContainer = styled.div`

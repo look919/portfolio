@@ -142,6 +142,7 @@ export const Nav = () => {
   const handleNavDisplay = () => {
     isOpen ? setIsOpen(false) : setIsOpen(true);
   };
+
   return (
     <NavWrapper className={isOpen ? 'nav-open' : 'nav-closed'}>
       <NavButton id='nav-button' onClick={handleNavDisplay}>
@@ -186,7 +187,7 @@ export const Nav = () => {
         <ScrollLink
           to='/'
           activeStyle={{ fill: '#38ed6e', pointerEvents: 'none' }}
-          hght={isOpen ? '2em' : '0'}
+          hght={isOpen ? '0' : '0'}
           textofprevious='Contact'
         >
           &nbsp;

@@ -42,8 +42,9 @@ const WelcomePageWrapper = styled.section`
     left: 2rem;
   }
   @media ${device.mobileL} {
-    width: calc(100% - 2rem);
-    left: 1rem;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 `;
 const WelcomPageDescription = styled.p`

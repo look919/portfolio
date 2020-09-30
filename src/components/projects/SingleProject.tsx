@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { GithubIcon, ProjectOnlineIcon } from '../../img/Svgs';
 import { Context } from '../languages/Wrapper';
 import { device } from '../layout/defaultStyles';
+import { useMediaQuery } from 'react-responsive';
 
 const Figure = styled.figure`
   display: grid;
@@ -95,6 +96,11 @@ const ProjectDetails = styled.div`
   padding: 0.75rem;
   padding-bottom: 0;
 
+  @media ${device.mobileL} {
+    padding: 0;
+    paddint-top: 1rem;
+  }
+
   transform: translateX(-50%);
 `;
 const ProjectDescription = styled.div`
@@ -117,9 +123,15 @@ const ProjectDescription = styled.div`
   @media ${device.laptopL} {
     font-size: 1rem;
   }
-
+  @media ${device.mobileL} {
+    padding: 0.75rem 0;
+  }
   p {
     padding: 0 1rem;
+
+    @media ${device.mobileL} {
+      padding: 0 0.5rem;
+    }
   }
 `;
 const ProjectDescriptionLink = styled.a`
@@ -148,6 +160,14 @@ const ProjectTechnologies = styled.div`
   align-items: center;
   justify-content: space-between;
   transition: all 0.1s;
+
+  @media ${device.laptopL} {
+    height: 6rem;
+  }
+  @media ${device.mobileL} {
+    padding: 0.5rem 0;
+    height: 4rem;
+  }
 `;
 const ProjectTechnologiesImgsHover = styled.img`
   object-fit: cover;
@@ -158,6 +178,10 @@ const ProjectTechnologiesImgsHover = styled.img`
   @media ${device.laptopL} {
     height: 4rem !important;
     width: 4rem !important;
+  }
+  @media ${device.mobileL} {
+    width: 3rem !important;
+    height: 3rem !important;
   }
 `;
 
@@ -175,6 +199,9 @@ const ProjectInDevelopment = styled.div`
   @media ${device.laptopL} {
     padding: 3px 10px;
   }
+  @media ${device.mobileLandscape} {
+    font-size: 1rem;
+  }
 `;
 const ProjectOverview = styled.div`
   position: relative;
@@ -189,6 +216,7 @@ const ProjectOverview = styled.div`
 
 export const SingleProject = ({ project }: { project: any }) => {
   const context = useContext(Context);
+  const isMobile = useMediaQuery({ query: '(max-width: 30em)' });
 
   if (!context) return null;
   const lang = context.getLang();
@@ -254,7 +282,7 @@ export const SingleProject = ({ project }: { project: any }) => {
               );
             })}
           </ProjectTechnologies>
-          {project.development && (
+          {project.development && !isMobile && (
             <ProjectInDevelopment>In development</ProjectInDevelopment>
           )}
         </ProjectDetails>

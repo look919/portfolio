@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, Fragment } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Select from 'react-select';
 import { Context } from '../languages/Wrapper';
 import { device } from './defaultStyles';
+import { useMediaQuery } from 'react-responsive';
 
 const PlLang = require('../../img/pl.png');
 const EnLang = require('../../img/en.png');
@@ -46,6 +47,7 @@ const SelectorContainer = styled.div`
   transition: all 0.3s;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justif-content: space-between;
 
@@ -53,16 +55,42 @@ const SelectorContainer = styled.div`
     top: 0.75rem;
     right: 5.5rem;
   }
+  @media ${device.mobileL} {
+    top: 1rem;
+    width: auto;
+    height: auto;
+  }
 `;
 const SelectorImg = styled.img`
   height: 2rem !important;
   width: 2rem !important;
   cursor: pointer !important;
+  top: 2.5rem;
+  right: 5rem;
+`;
+const LangSelector = styled.button`
+  background: none;
+  border: none;
+  margin: 0.2rem 0;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+`;
+const Flag = styled.img`
+  width: 1.4rem;
+  height: 1.2rem;
+  transition: all 0.5s;
 `;
 
 export const LanguageSelector = () => {
   const context = useContext(Context);
   let local = localStorage.getItem('lang') || 'en';
+  const isMobile = useMediaQuery({ query: '(max-width: 30em)' });
+  const langBtns = {
+    pl: { value: 'pl' },
+    en: { value: 'en' },
+  };
 
   const options = [
     {
@@ -94,26 +122,40 @@ export const LanguageSelector = () => {
   if (!context) return null;
 
   return (
-    <SelectorContainer>
+    <Fragment>
       <GlobalStyle lang={local} />
-      <Select
-        searchable={false}
-        className='select'
-        defaultValue={{
-          value: local,
-          label: (
-            <div>
-              <SelectorImg
-                src={local === 'en' ? EnLang : PlLang}
-                className='header__select__lang'
-                alt='uk flag'
-              />
-            </div>
-          ),
-        }}
-        onChange={(e: any) => context.selectLang(e)}
-        options={options}
-      />
-    </SelectorContainer>
+
+      <SelectorContainer>
+        {!isMobile ? (
+          <Select
+            searchable={false}
+            className='select'
+            defaultValue={{
+              value: local,
+              label: (
+                <div>
+                  <SelectorImg
+                    src={local === 'en' ? EnLang : PlLang}
+                    className='header__select__lang'
+                    alt='uk flag'
+                  />
+                </div>
+              ),
+            }}
+            onChange={(e: any) => context.selectLang(e)}
+            options={options}
+          />
+        ) : (
+          <Fragment>
+            <LangSelector onClick={() => context.selectLang(langBtns.en)}>
+              <Flag src={EnLang} alt='en lang' />
+            </LangSelector>
+            <LangSelector onClick={() => context.selectLang(langBtns.pl)}>
+              <Flag src={PlLang} alt='pl lang' />
+            </LangSelector>
+          </Fragment>
+        )}
+      </SelectorContainer>
+    </Fragment>
   );
 };
