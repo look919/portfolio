@@ -273,7 +273,7 @@ export const SingleProject = ({ project }: { project: any }) => {
 
               {lang === 'en' && project.title === 'ResumeGenerator' && (
                 <ProjectDescriptionLink
-                  href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1Ab6ZAv_uclA9PvL3VnfTJlGVs20KJWMh/view?usp=sharing'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -282,7 +282,7 @@ export const SingleProject = ({ project }: { project: any }) => {
               )}
               {lang === 'pl' && project.title === 'ResumeGenerator' && (
                 <ProjectDescriptionLink
-                  href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1Ab6ZAv_uclA9PvL3VnfTJlGVs20KJWMh/view?usp=sharing'
                   target='_blank'
                   rel='noopener noreferrer'
                 >

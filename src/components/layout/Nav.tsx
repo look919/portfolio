@@ -156,7 +156,7 @@ export const Nav = () => {
 
       <NavIcons
         id='nav-icons'
-        hght={isOpen ? (!isMobileS ? '11rem' : '9.5rem') : '0'}
+        hght={isOpen ? (!isMobileS ? '10.8rem' : '9.5rem') : '0'}
       >
         <ScrollLink
           exact={true}

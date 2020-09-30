@@ -198,7 +198,7 @@ export const Profile = () => {
               <LinkedIn />
             </Link>
             <Link
-              href='https://drive.google.com/file/d/18zFQPB6Xhl6tQjVtKN8mUvSQQdtbFn5U/view'
+              href='https://drive.google.com/file/d/1Ab6ZAv_uclA9PvL3VnfTJlGVs20KJWMh/view?usp=sharing'
               target='_blank'
               rel='noopener noreferrer'
             >

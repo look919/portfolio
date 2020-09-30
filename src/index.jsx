@@ -1,14 +1,15 @@
 import React from 'react';
-import Wrapper from './components/languages/Wrapper';
 import ReactDOM from 'react-dom';
+import HttpsRedirect from 'react-https-redirect';
+import Wrapper from './components/languages/Wrapper';
 import './index.css';
 import { App } from './components/App';
 
 ReactDOM.render(
-  <React.Fragment>
+  <HttpsRedirect>
     <Wrapper>
       <App />
     </Wrapper>
-  </React.Fragment>,
+  </HttpsRedirect>,
   document.getElementById('root')
 );
