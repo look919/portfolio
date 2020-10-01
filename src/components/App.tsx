@@ -24,6 +24,12 @@ const FixedMobileVh = styled(Div100vh)`
   @media ${device.mobileL} {
     padding-top: 6rem;
   }
+  @media ${device.mobile} {
+    padding-bottom: 1rem;
+  }
+  @media ${device.mobileS} {
+    padding-bottom: 0.5rem;
+  }
 `;
 
 export const App = () => {

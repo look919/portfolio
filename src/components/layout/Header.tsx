@@ -24,6 +24,9 @@ const HeaderContainer = styled.header`
   }
   @media ${device.mobileL} {
     left: 1.5rem;
+    top: 0.5rem;
+  }
+  @media ${device.mobileS} {
     top: 1rem;
   }
 `;

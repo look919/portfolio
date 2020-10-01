@@ -17,6 +17,14 @@
   margin: inherit;
   transition: inherit;
 }
+.svg-nav:active,
+.svg-nav:focus {
+  outline: 0;
+  border: none;
+  outline-style: none;
+  -moz-outline-style: none;
+  box-shadow: none;
+}
 
 .carousel-root {
   width: 100%;
