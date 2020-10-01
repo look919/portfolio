@@ -61,7 +61,7 @@
     "img": "new-portfolio.png",
     "descriptionPl": "Mój najnowszy projekt. Normalnie bym tego tu nie wrzucał, skoro to strona na której się znajdujesz, ale chciałem zaznaczyć, że to moje pierwsze spotkanie z styled-components i TypeScriptem.",
     "descriptionEn": "My latest project. Normally I wouldn't put it in here, if it's the page you're on, but I would like to point out that this is my first meeting with styled-components and TypeScript.",
-    "imgHover": ["react.png", "styled-components.png", "typescript.png"],
+    "imgHover": ["typescript.png", "react.png", "styled-components.png"],
     "development": true,
     "online": true
   },

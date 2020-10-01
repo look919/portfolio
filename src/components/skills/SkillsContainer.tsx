@@ -173,13 +173,12 @@ const ElementContainer = styled.div`
       margin-right: 0.7rem;
     }
     @media ${device.mobile} {
-      height: 0.8rem;
-      width: 0.8rem;
-      margin-right: 0.8rem;
-    }
-    @media ${device.mobileS} {
       height: 0.7rem;
       width: 0.7rem;
+    }
+    @media ${device.mobileS} {
+      height: 0.6rem;
+      width: 0.6rem;
     }
   }
   span {
