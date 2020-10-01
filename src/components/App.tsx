@@ -2,20 +2,34 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Div100vh from 'react-div-100vh';
 import './app.css';
+import styled from 'styled-components';
+import { device } from './layout/defaultStyles';
 
 import { Header } from './layout/Header';
 import { LanguageSelector } from './layout/LanguageSelector';
 import { Nav } from './layout/Nav';
-
 import { WelcomePage } from './welcomePage/WelcomePage';
 import { Skills } from './skills/Skills';
 import { Projects } from './projects/Projects';
 import { Contact } from './contact/Contact';
 
+const FixedMobileVh = styled(Div100vh)`
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+
+  @media ${device.laptopL} {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+  }
+  @media ${device.mobileL} {
+    padding-top: 6rem;
+  }
+`;
+
 export const App = () => {
   return (
     <BrowserRouter>
-      <Div100vh>
+      <FixedMobileVh>
         <Header />
         <LanguageSelector />
         <Nav />
@@ -26,7 +40,7 @@ export const App = () => {
           <Route path='/contact' component={Contact} exact />
           <Route component={WelcomePage} />
         </Switch>
-      </Div100vh>
+      </FixedMobileVh>
     </BrowserRouter>
   );
 };
