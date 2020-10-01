@@ -25,10 +25,7 @@ export const showUp = keyframes`
 export const Page = styled.main`
   position: relative;
   margin: 0;
-  // margin-top: 10rem;
-  // margin-bottom: 4rem;
   height: 100%;
-  //height: calc(100% - 14rem);
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: calc(100% - 3rem) 3rem;
@@ -38,16 +35,6 @@ export const Page = styled.main`
 
   animation: ${showUp} 1.5s ease-out 0.25s both;
 
-  @media ${device.laptopL} {
-    //margin-top: 8rem;
-    //margin-bottom: 2rem;
-
-    //height: calc(100% - 10rem);
-  }
-  @media ${device.mobileL} {
-    //margin-top: 6rem;
-    //height: calc(100% - 8rem);
-  }
   @media ${device.mobileL} {
     grid-template-rows: calc(100% - 2.5rem) 2.5rem;
   }
