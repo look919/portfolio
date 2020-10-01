@@ -55,6 +55,10 @@ const TitleContainer = styled.div`
   }
   @media ${device.mobile} {
     margin-top: 0;
+    margin-bottom: 3px;
+  }
+  @media ${device.mobileS} {
+    margin-bottom: 2px;
   }
 
   svg {
@@ -83,10 +87,18 @@ const TitleContainer = styled.div`
       margin-right: 0.6rem;
       margin-left: 1px;
     }
+
+    @media ${device.mobile} {
+      height: 0.85rem;
+      width: 0.85rem;
+      margin-left: 2px;
+      margin-right: 0.7rem;
+    }
     @media ${device.mobileS} {
       height: 0.75rem;
       width: 0.75rem;
-      margin-left: 3px;
+      margin-left: 2px;
+      margin-right: 0.7rem;
     }
   }
   h3 {
@@ -107,8 +119,11 @@ const TitleContainer = styled.div`
     @media ${device.tablet} {
       font-size: 1rem;
     }
+    @media ${device.mobile} {
+      font-size: 0.8rem;
+    }
     @media ${device.mobileS} {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
   }
 `;
@@ -123,8 +138,11 @@ const ElementContainer = styled.div`
     @media ${device.mobileLandscape} {
       margin-bottom: 3px;
     }
-    @media ${device.mobileS} {
+    @media ${device.mobile} {
       margin-bottom: 2px;
+    }
+    @media ${device.mobileS} {
+      margin-bottom: 0;
     }
   }
 
@@ -154,10 +172,14 @@ const ElementContainer = styled.div`
       width: 0.8rem;
       margin-right: 0.7rem;
     }
-    @media ${device.mobileS} {
+    @media ${device.mobile} {
       height: 0.8rem;
       width: 0.8rem;
       margin-right: 0.8rem;
+    }
+    @media ${device.mobileS} {
+      height: 0.7rem;
+      width: 0.7rem;
     }
   }
   span {
@@ -174,8 +196,11 @@ const ElementContainer = styled.div`
     @media ${device.tabletS} {
       font-size: 0.8rem;
     }
-    @media ${device.mobileS} {
+    @media ${device.mobile} {
       font-size: 0.7rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 0.6rem;
     }
   }
 `;
@@ -212,10 +237,10 @@ const SkillsBox = styled.div`
     padding-bottom: 0.5rem;
   }
   @media ${device.mobile} {
-    padding: 0.5rem 1.25rem;
+    padding: 0.35rem 1.25rem;
   }
   @media ${device.mobileS} {
-    padding: 0.4rem 1.25rem;
+    padding: 0.25rem 1.25rem;
   }
 
   &:hover {
@@ -243,13 +268,17 @@ const SkillsBox = styled.div`
         height: 1rem;
         width: 1rem;
       }
-      @media ${device.tabletS} {
+      @media ${device.tablet} {
         height: 0.8rem;
         width: 0.8rem;
       }
-      @media ${device.mobileS} {
+      @media ${device.mobile} {
         height: 0.7rem;
         width: 0.7rem;
+      }
+      @media ${device.mobileS} {
+        height: 0.6rem;
+        width: 0.6rem;
       }
     }
     span {
@@ -266,8 +295,11 @@ const SkillsBox = styled.div`
       @media ${device.tabletS} {
         font-size: 0.8rem;
       }
-      @media ${device.mobileS} {
+      @media ${device.mobile} {
         font-size: 0.7rem;
+      }
+      @media ${device.mobileS} {
+        font-size: 0.6rem;
       }
     }
   }

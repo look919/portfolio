@@ -48,6 +48,9 @@ export const Page = styled.main`
     margin-top: 6rem;
     height: calc(100% - 8rem);
   }
+  @media ${device.mobileL} {
+    grid-template-rows: calc(100% - 2rem) 2.5rem;
+  }
 `;
 
 export const H1 = styled.h1`
@@ -112,6 +115,9 @@ export const Info = styled.p`
 
   animation: ${showUp} 1s ease-out 1s both;
 
+  @media ${device.mobileL} {
+    margin-top: 0;
+  }
   @media ${device.mobile} {
     width: 95%;
   }
