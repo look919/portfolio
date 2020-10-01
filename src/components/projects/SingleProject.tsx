@@ -84,6 +84,11 @@ const ProjectLinkActive = styled.a`
     margin-bottom: -5px;
 
     transition: all 0.4s;
+
+    @media ${device.mobile} {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
   }
 
   &:hover {
@@ -298,7 +303,7 @@ export const SingleProject = ({ project }: { project: any }) => {
               return (
                 <ProjectTechnologiesImgsHover
                   marBottom={
-                    el !== 'node.png' ? '0' : !isMobile ? '0.7rem' : '0.4rem'
+                    el !== 'node.png' ? '0' : !isMobile ? '0.7rem' : '0.2rem'
                   }
                   src={require(`../../img/techs/${el}`)}
                   key={el}

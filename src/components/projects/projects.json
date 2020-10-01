@@ -56,7 +56,7 @@
   },
   {
     "title": "New portfolio",
-    "github": "https://github.com/look919/tomaszwirkus",
+    "github": "https://github.com/look919/portfolio",
     "url": "https://www.tomaszwirkus.com/",
     "img": "new-portfolio.png",
     "descriptionPl": "Mój najnowszy projekt. Normalnie bym tego tu nie wrzucał, skoro to strona na której się znajdujesz, ale chciałem zaznaczyć, że to moje pierwsze spotkanie z styled-components i TypeScriptem.",
@@ -67,8 +67,8 @@
   },
   {
     "title": "Old Portfolio",
-    "github": "https://github.com/look919/portfolio",
-    "url": "https://www.tomaszwirkus.com/",
+    "github": "https://github.com/look919/portfolio-old",
+    "url": "https://tw-old-portfolio.herokuapp.com/",
     "img": "portfolio.png",
     "descriptionPl": "Mój pierwszy większy projekt wykorzystujący React'a. Z pewnością nie jest on najbardziej zaawansowany, ale to właśnie na niego poświęciłem najwięcej czasu. Niektóre jego komponenty wykorzystałem w nowym portfolio.",
     "descriptionEn": "My first bigger project using React. It is certainly not the most advanced, but it is the one I have devoted most of my time to. I used some of its components in the new portfolio.",

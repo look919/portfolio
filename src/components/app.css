@@ -60,6 +60,13 @@
 .control-arrow {
   margin: 10rem 0 !important;
 }
+
+@media only screen and (max-width: 30em) {
+  .control-arrow {
+    margin-top: 5rem !important;
+    margin-bottom: 7rem !important;
+  }
+}
 .control-arrow:hover {
   background: rgba(#000, 1) !important;
 }
