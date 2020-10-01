@@ -46,6 +46,9 @@ const WelcomePageWrapper = styled.section`
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
   }
+  @media ${device.mobile} {
+    top: ${({ moveTop }: { moveTop: boolean }) => (!moveTop ? '50%' : '40%')};
+  }
 `;
 const WelcomPageDescription = styled.p`
   font-size: 1.5rem;
