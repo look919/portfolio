@@ -109,6 +109,14 @@ const ScrollLink = styled(NavLink)`
   cursor: pointer;
   transition: all 0.5s;
 
+  &:active,
+  &:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    box-shadow: none;
+  }
+
   @media ${device.mobileS} {
     width: 1.2rem;
   }
