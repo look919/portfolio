@@ -39,6 +39,11 @@ export const Page = styled.main`
   @media ${device.mobileL} {
     grid-template-rows: calc(100% - 2.5rem) 2.5rem;
   }
+  @media ${device.mobileLandscapeHeight} {
+    grid-template-rows: min-content 3rem;
+    overflow: visible;
+    margin-top: 3rem;
+  }
 `;
 
 export const H1 = styled.h1`
@@ -194,6 +199,9 @@ export const Form = styled.form`
   @media ${device.mobileLandscape} {
     width: 90%;
   }
+  @media ${device.mobileLandscapeHeight} {
+    margin-bottom: 2rem;
+  }
 `;
 export const InputContainer = styled.div`
   position: relative;
@@ -246,6 +254,9 @@ export const TextArea = styled.textarea`
 
   @media ${device.mobileLandscape} {
     font-size: 0.9rem;
+  }
+  @media ${device.mobileLandscapeHeight} {
+    background-color: rgb(14, 7, 30);
   }
 
   &:focus {
