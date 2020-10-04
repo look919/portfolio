@@ -29,6 +29,12 @@ const ProfileContainer = styled.div`
     left: 50%;
     transform: translateX(-50%);
   }
+  @media ${device.mobileLandscapeHeight} {
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.5rem;
+  }
 `;
 const DataContainer = styled.div`
   height: 100%;
