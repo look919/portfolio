@@ -31,6 +31,9 @@ const Content = styled.div`
   @media ${device.mobile} {
     grid-row-gap: 0.5rem;
   }
+  @media ${device.mobileLandscapeHeight} {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const Skills = () => {

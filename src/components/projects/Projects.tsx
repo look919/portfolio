@@ -24,6 +24,9 @@ const CarouselContainer = styled.div`
   @media ${device.mobileL} {
     width: 95%;
   }
+  @media ${device.mobileLandscapeHeight} {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const Projects = () => {

@@ -2,6 +2,7 @@ import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import { useMediaQuery } from 'react-responsive';
 
 import { Profile } from './Profile';
 import {
@@ -49,6 +50,10 @@ const WelcomePageWrapper = styled.section`
   @media ${device.mobile} {
     top: ${({ moveTop }: { moveTop: boolean }) => (!moveTop ? '50%' : '40%')};
   }
+  @media ${device.mobileLandscapeHeight} {
+    display: ${({ moveTop }: { moveTop: boolean }) =>
+      !moveTop ? 'flex' : 'none'};
+  }
 `;
 const WelcomPageDescription = styled.p`
   font-size: 1.5rem;
@@ -66,8 +71,17 @@ const ButtonLink = styled(Link)`
   margin-right: 2rem;
 `;
 
+const MobileLandscapeBtnContainer = styled.div`
+  position: absolute;
+  top: 1.75rem;
+  left: 1.5rem;
+
+  transition: all 0.4s;
+`;
+
 export const WelcomePage = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const isMobileLandscape = useMediaQuery({ query: '(max-height: 31.25em)' });
 
   const handleProfileOpening = () => {
     return !isProfileOpen ? setIsProfileOpen(true) : setIsProfileOpen(false);
@@ -110,6 +124,16 @@ export const WelcomePage = () => {
           </Button>
         </ButtonContainer>
       </WelcomePageWrapper>
+      {isProfileOpen && isMobileLandscape && (
+        <MobileLandscapeBtnContainer>
+          <Button onClick={handleProfileOpening}>
+            <FormattedMessage
+              id='WelcomePage.HideProfileBtn'
+              defaultMessage='Hide Profile'
+            />
+          </Button>
+        </MobileLandscapeBtnContainer>
+      )}
       {isProfileOpen && <Profile />}
     </Fragment>
   );

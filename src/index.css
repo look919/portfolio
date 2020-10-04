@@ -18,7 +18,6 @@ body {
   height: 100%;
   overflow: hidden;
 }
-
 canvas {
   position: absolute;
   top: 0;
@@ -26,4 +25,11 @@ canvas {
   z-index: -1;
   height: 100%;
   width: 100%;
+}
+
+@media only screen and (max-height: 500px) {
+  body {
+    overflow: visible;
+    background-image: linear-gradient(to right, rgb(14, 7, 30), rgb(18, 8, 40));
+  }
 }
