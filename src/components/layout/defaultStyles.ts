@@ -10,6 +10,7 @@ export const device = {
   mobileL: '(max-width: 30em)',
   mobile: '(max-width: 25em)',
   mobileS: '(max-width: 21.25em)',
+  mobileLandscapeHeight: '(max-height: 31.25em)',
 };
 
 export const showUp = keyframes`

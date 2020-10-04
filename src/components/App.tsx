@@ -30,6 +30,10 @@ const FixedMobileVh = styled(Div100vh)`
   @media ${device.mobileS} {
     padding-bottom: 0.5rem;
   }
+  @media ${device.mobileLandscapeHeight} {
+    height: initial !important;
+    overflow: visible;
+  }
 `;
 
 export const App = () => {

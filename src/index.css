@@ -27,3 +27,10 @@ canvas {
   height: 100%;
   width: 100%;
 }
+
+@media only screen and (max-height: 500px) {
+  body {
+    overflow: visible;
+    background-image: linear-gradient(to right, rgb(14, 7, 30), rgb(18, 8, 40));
+  }
+}
