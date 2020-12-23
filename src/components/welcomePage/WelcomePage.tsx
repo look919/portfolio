@@ -126,7 +126,7 @@ export const WelcomePage = () => {
       </WelcomePageWrapper>
       {isProfileOpen && isMobileLandscape && (
         <MobileLandscapeBtnContainer>
-          <Button onClick={handleProfileOpening}>
+          <Button onClick={handleProfileOpening} id='showProfile'>
             <FormattedMessage
               id='WelcomePage.HideProfileBtn'
               defaultMessage='Hide Profile'
